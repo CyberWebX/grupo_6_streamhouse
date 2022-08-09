@@ -13,6 +13,7 @@ Streamers amateurs, semi-profesionales y profesionales de cualquier edad.
 
 
 Páginas referentes:
+
 https://www.7g.com.ar/setup-para-gaming-streaming/
 
 https://gamerstreamer.net/mejor-pc-streaming/
