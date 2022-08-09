@@ -24,6 +24,7 @@ https://hdstreaming.com.ar/portfolio/
 
 
 Descripción del grupo:
+
 Mario Rovira: Ing. de Sistemas, desarrollador Web y docente. Me gusta el futbol y el cine. Tengo 2 hijos uno de 23 y otro de 13 años, y soy de Barranquilla Colombia.
 
 Gonzalo chessari: 29 años. Trabajo como analista de calidad y capacitador. Fanatico del boxeo y de todos los deportes de contacto. Descubrí la prrgrmacion gracias a mis amigos.
