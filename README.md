@@ -31,5 +31,7 @@ Gonzalo chessari: 29 años. Trabajo como analista de calidad y capacitador. Fana
 
 Maximiliano Cirese: 41 años. Tengo 3 hijos. Administro una clínica psiquiátrica. Me gusta el cine. Juego al padel, ando en bici y practico Jiu-Jitsu.
 
+Ariel León: Actualmente trabajo como operario de depósito en una fábrica metalúrgica de tuercas. Me gusta el fútbol y el ciclismo. Entre al mundo de la programación porque busco un cambio de rubro y crecer lo más posible en el ámbito de la tecnología
+
 
 Tablero de trabajo: https://trello.com/b/fHwy6kCS/streamhouse
