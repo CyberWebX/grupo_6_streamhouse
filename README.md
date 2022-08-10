@@ -33,5 +33,7 @@ Maximiliano Cirese: 41 años. Tengo 3 hijos. Administro una clínica psiquiátri
 
 Ariel León: Actualmente trabajo como operario de depósito en una fábrica metalúrgica de tuercas. Me gusta el fútbol y el ciclismo. Entre al mundo de la programación porque busco un cambio de rubro y crecer lo más posible en el ámbito de la tecnología
 
+Ignacio Villanueva: 26 años. Actualmente me desarollo en el rubro de la construccion, en una pyme propia destinada a la ejecucion de obras publicas y privadas.
+Estoy iniciando en el mundo de la programacion por gusto, y gracias a familiares y conocidos que me empujaron a dar el primer paso. Fanatico de Messi y el fernet
 
 Tablero de trabajo: https://trello.com/b/fHwy6kCS/streamhouse
