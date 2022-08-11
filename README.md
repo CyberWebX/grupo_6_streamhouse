@@ -3,7 +3,7 @@
 Tematica y descripcion: 
 > Venta de setups para streaming.
 > 
-> Servicio de streaming para eventos en vivo.
+> Servicio de streaming para eventos.
 > 
 > Alquiler de salas equipadas para streaming según preferencias.
 
