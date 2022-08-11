@@ -1,7 +1,7 @@
 # streamhouse
 
 Tematica y descripcion: 
-> Venta de setups para streaming.
+> Venta de setups para gamming y streaming.
 > 
 > Servicio de streaming para eventos.
 > 
@@ -21,6 +21,8 @@ https://gamerstreamer.net/mejor-pc-streaming/
 https://displayav.com/estudio-de-streaming/?gclid=CjwKCAjw6MKXBhA5EiwANWLODPnGcLzf3nkPjCWnsnyI1ihZphUoSmsZ4VgIbnXL360JxGx6HBSdzRoCdJ0QAvD_BwE
 
 https://hdstreaming.com.ar/portfolio/
+
+https://www.destreaming.es/streaming/pc-para-streaming-barato/
 
 
 Descripción del grupo:
