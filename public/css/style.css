@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo {
+    background-color: black;
+}
+
+.form-registro h4 {
+    margin-bottom: 1.5vw;
+    text-align: center;
+}
+
+.form-registro {
+    text-align: center;
+    border: 3px solid #2BE0A4;
+    border-radius: 4px;
+    background-color: black;
+    width: 20vw;
+    padding: 2vw;
+    margin: auto;
+    margin-top: 10vw;
+    color: white;
+}
+
+.casilla {
+    border: 2px solid #2BE0A4;
+    background-color: white;
+    width: 100%;
+    padding: 0.7vw;
+    border-radius: 4px;
+    margin-bottom: 2vh;
+}
