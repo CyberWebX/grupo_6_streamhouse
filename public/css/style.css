@@ -91,6 +91,88 @@ h1,h2,h3,h4,h5,h6{
 
 
 
+
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 150px;
+    background-color: black;
+    align-items: center;
+    font-family:Helvetica;
+}
+
+.logo{
+   
+    width: 30%;
+}
+
+.barra{
+    font-size: 25px;
+    padding-right: 20px;
+}
+
+nav {
+    display: flex;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+
+.logo2{
+    width: 1920px;
+    height: 1080px;
+}
+
+
+footer{
+    width: 1920px;
+    background-color: black;
+}
+
+.pie{
+    height: 150px;
+    width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.telefono{
+    padding-left: 25px;
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fb{
+    height: 70px;
+    width: 70px;
+}
+.ig{
+    height: 70px;
+    width: 70px;
+}
+.wp{
+    height: 70px;
+    width: 70px;
+}
+
+
+
+
+
+
 @media (min-width:576px) {
 
     .productosCuatroColumnas{
