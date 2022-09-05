@@ -5,7 +5,7 @@ const publicPath = path.resolve(__dirname, './public');
 
 app.use(express.static(publicPath));
 
-app.get('/', (req, res)=> {
+app.get('/home', (req, res)=> {
     res.sendFile(path.resolve(__dirname, './views/home.html'));
 });
 
