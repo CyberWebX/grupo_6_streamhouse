@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Oxygen;
 }
 
 .fondo {
@@ -32,4 +36,74 @@
     padding: 0.7vw;
     border-radius: 4px;
     margin-bottom: 2vh;
+}
+.botón {
+    border: 2px solid #2BE0A4;
+    background-color: white;
+    width: 40%;
+    padding: 0.7vw;
+    border-radius: 4px;
+    margin-bottom: 2vh;
+
+}
+
+.barraPreSlider {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+}
+.barraPreSlider img {
+    width: 5%;
+    
+}
+.minput{
+    width: 100%;
+  
+
+}
+.buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slider img{
+    width: 100%;
+}
+
+.imgProducto{
+    width: 50%;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+
+
+
+@media (min-width:576px) {
+
+    .productosCuatroColumnas{
+        display: flex;
+    }
+
+
+
+
+}
+@media (min-width:768px) {
+
+
+
+
 }
