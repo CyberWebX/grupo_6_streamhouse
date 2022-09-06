@@ -109,7 +109,7 @@ header{
     height: 150px;
     background-color: black;
     align-items: center;
-    font-family:Helvetica;
+    font-family:Oxygen;
 }
 
 .logo{
@@ -132,10 +132,7 @@ nav a{
 }
 
 
-.logo2{
-    width: 1920px;
-    height: 1080px;
-}
+
 
 
 footer{
