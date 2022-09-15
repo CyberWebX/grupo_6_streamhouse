@@ -29,8 +29,6 @@ Descripción del grupo:
 
 Mario Rovira: Ing. de Sistemas, desarrollador Web y docente. Me gusta el futbol y el cine. Tengo 2 hijos uno de 23 y otro de 13 años, y soy de Barranquilla Colombia.
 
-Gonzalo chessari: 29 años. Trabajo como analista de calidad y capacitador. Fanatico del boxeo y de todos los deportes de contacto. Descubrí la prrgrmacion gracias a mis amigos.
-
 Maximiliano Cirese: 41 años. Tengo 3 hijos. Administro una clínica psiquiátrica. Me gusta el cine. Juego al padel, ando en bici y practico Jiu-Jitsu.
 
 Ariel León: Actualmente trabajo como operario de depósito en una fábrica metalúrgica de tuercas. Me gusta el fútbol y el ciclismo. Entre al mundo de la programación porque busco un cambio de rubro y crecer lo más posible en el ámbito de la tecnología
