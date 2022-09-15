@@ -1,4 +1,4 @@
-# streamhouse
+# Streamhouse
 
 Tematica y descripcion: 
 > Venta de setups para gamming y streaming.
