@@ -2,10 +2,9 @@
   "name": "stream-house",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
-
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   "homepage": "https://github.com/CyberWebX/grupo_6_streamhouse#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "modules": "^0.4.0"
+    "modules": "^0.4.0",
+    "nodemon": "^2.0.20"
   }
 }

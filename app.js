@@ -3,28 +3,23 @@ const path = require ('path');
 const app = express();
 const publicPath = path.resolve(__dirname, './public');
 
+const rutasMain = require("./src/routes/routes.main.js")
+const rutasProducts = require ("./src/routes/routes.products.js")
+const rutasUsers = require ("./src/routes/routes.users.js")
+
+// static files
+
 app.use(express.static(publicPath));
 
-app.get('/', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './views/home.html'));
-});
+// rutas
 
-app.get('/producto', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './views/producto.html'));
-});
+app.use("/", rutasMain)
 
-app.get('/carrito', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './views/carrito.html'));
-});
+app.use("/products", rutasProducts)
 
-app.get('/registro', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './views/registro.html'));
-});
+app.use("/users", rutasUsers)
 
-app.get('/login', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './views/login.html'));
-});
-
+// puerto
 
 app.listen(process.env.PORT || 3000, function() {
     console.log("Servidor corriendo");
