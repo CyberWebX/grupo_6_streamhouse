@@ -7,6 +7,11 @@ const rutasMain = require("./src/routes/routes.main.js")
 const rutasProducts = require ("./src/routes/routes.products.js")
 const rutasUsers = require ("./src/routes/routes.users.js")
 
+//templete engine
+
+app.set('views', path.join(__dirname,'./src/views'))
+app.set('view engine', "ejs");
+
 // static files
 
 app.use(express.static(publicPath));

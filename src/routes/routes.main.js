@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.get("/", controladorMain.home)
 
+//Exportar
 
 module.exports = router;

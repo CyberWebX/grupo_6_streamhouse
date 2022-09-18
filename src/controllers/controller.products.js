@@ -1,28 +1,27 @@
-const path = require ('path');
-
 const controladorProductos = {
 
     carrito: function (req, res){
-        res.sendFile(path.resolve(__dirname, '../views/products/carrito.html'));
+        res.render("./products/carrito");
     },
 
     crearProducto: function (req, res){
-        res.sendFile(path.resolve(__dirname, '../views/products/crear.producto.html'));
+        res.render("./products/crear.producto");
     },
 
     detalleProducto: function (req, res){
-        res.sendFile(path.resolve(__dirname, '../views/products/detalle.producto.html'));
+        res.render("./products/detalle.producto");
     },
 
     editarProducto: function (req, res){
-        res.sendFile(path.resolve(__dirname, '../views/products/editar.producto.html'));
+        res.render("./products/editar.producto");
     },
 
     listadoProductos: function (req, res){
-        res.sendFile(path.resolve(__dirname, '../views/products/listado.productos.html'));
+        res.render("./products/listado.productos");
     },
 
-
 }
+
+//Exportar
 
 module.exports = controladorProductos

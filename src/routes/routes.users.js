@@ -10,5 +10,6 @@ router.get("/perfil", controladorUsuarios.perfil)
 
 router.get("/registro", controladorUsuarios.registro)
 
+//Exportar
 
 module.exports = router;
