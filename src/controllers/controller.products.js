@@ -4,20 +4,20 @@ const controladorProductos = {
         res.render("./products/carrito");
     },
 
-    crearProducto: function (req, res){
-        res.render("./products/crear.producto");
+    crear: function (req, res){
+        res.render("./products/crear");
     },
 
-    detalleProducto: function (req, res){
-        res.render("./products/detalle.producto");
+    detalle: function (req, res){
+        res.render("./products/detalle");
     },
 
-    editarProducto: function (req, res){
-        res.render("./products/editar.producto");
+    editar: function (req, res){
+        res.render("./products/editar");
     },
 
-    listadoProductos: function (req, res){
-        res.render("./products/listado.productos");
+    listado: function (req, res){
+        res.render("./products/listado");
     },
 
 }

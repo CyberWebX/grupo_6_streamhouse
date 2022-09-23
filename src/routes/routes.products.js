@@ -6,13 +6,13 @@ const router = express.Router();
 
 router.get("/carrito", controladorProductos.carrito)
 
-router.get("/crearProducto", controladorProductos.crearProducto)
+router.get("/crear", controladorProductos.crear)
 
-router.get("/detalleProducto", controladorProductos.detalleProducto)
+router.get("/detalle", controladorProductos.detalle)
 
-router.get("/editarProducto", controladorProductos.editarProducto)
+router.get("/editar", controladorProductos.editar)
 
-router.get("/listadoProductos", controladorProductos.listadoProductos)
+router.get("/listado", controladorProductos.listado)
 
 //Exportar
 
