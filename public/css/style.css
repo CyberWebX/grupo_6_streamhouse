@@ -55,19 +55,6 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 2vh;
 }
 
-.barraPreSlider {
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-
-}
-.barraPreSlider img {
-    width: 5%;
-    
-}
 .minput{
     width: 100%;
   
@@ -103,25 +90,55 @@ h1,h2,h3,h4,h5,h6{
 
 
 header{
+ 
+    background-color: black;
+    
+   
+    font-family:Oxygen;
+    
+}
+.main-header{
+    color: #2BE0A4;
+    background-color: black;
+    
+    position: fixed;
+    top: 0;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 150px;
-    background-color: black;
     align-items: center;
-    font-family:Oxygen;
-}
 
+    
+    
+}
 .logo{
+    
+    width: 40%;
    
-    width: 30%;
 }
 
 .barra{
-    font-size: 25px;
+    font-size: 20px;
     padding-right: 20px;
+    
+    display: none;
+    margin-top: 0px;
+    flex-direction: column;
+    text-align: center;
+}
+#hamburguer{
+    display: flex;
+    color: #2BE0A4;
+    background-color: black;
+    width: 100%;
 }
 
+.navegacion{
+    color: #2BE0A4;
+    background-color: black;
+   
+}
 nav {
     display: flex;
 }
@@ -131,22 +148,35 @@ nav a{
     padding-right: 20px;
 }
 
+.barraPreSlider {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+}
+.barraPreSlider img {
+    width: 5%;
+    
+}
 
 
 
 
 footer{
-    width: 1920px;
+    
     background-color: black;
 }
 
 .pie{
-    height: 150px;
-    width: 1920px;
+    
+    
     display: flex;
     justify-content: space-between;
     color: white;
-    font-size: 1.5rem;
+    font-size: 8px;
     align-items: center;
 }
 
@@ -161,18 +191,20 @@ footer{
 }
 
 .fb{
-    height: 70px;
-    width: 70px;
+    
+    width: 35px;
 }
 .ig{
-    height: 70px;
-    width: 70px;
+   
+    width: 35px;
 }
 .wp{
-    height: 70px;
-    width: 70px;
+    
+    width: 35px;
 }
-
+.logoFooter{
+    width: 40%;
+}
 
 
 
@@ -269,7 +301,6 @@ footer{
 
 
 /* FIN CREAR PRODUCTO */
-
 
 
 
