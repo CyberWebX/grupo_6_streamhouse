@@ -298,7 +298,39 @@ footer{
 
 /* CREAR PRODUCTO */
 
+.bodyCrear {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
+.headerCrear {
+    display: flex;
+    position: relative;
+    flex-wrap: row;
+    justify-content: space-around;
+    color: black;
+    height: 25%;
+}
+
+.formCrear {
+    text-align: center;
+    border: 3px solid #2BE0A4;
+    border-radius: 4px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    padding: 2vw;
+    margin: auto;
+    margin-top: 2.5vw;
+    color: white;
+}
+
+.footerCrear {
+    height: 25%;
+}
 
 /* FIN CREAR PRODUCTO */
 
