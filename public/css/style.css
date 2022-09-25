@@ -12,6 +12,8 @@ h1,h2,h3,h4,h5,h6{
     background-color: black;
 }
 
+
+
 .form-registro h4 {
     margin-bottom: 1.5vw;
     text-align: center;
@@ -90,13 +92,20 @@ h1,h2,h3,h4,h5,h6{
 
 
 header{
- 
+    
     background-color: black;
     
    
     font-family:Oxygen;
     
 }
+#relleno {
+    height: 70px;
+    background-color: black;
+    color: yellow;
+
+}
+
 .main-header{
     color: #2BE0A4;
     background-color: black;
@@ -108,6 +117,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 
     
     
@@ -149,7 +159,7 @@ nav a{
 }
 
 .barraPreSlider {
-    margin-top: 70px;
+    margin-top: 67px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -336,6 +346,87 @@ footer{
 
 
 
+/* COMIENZO SECCION SLIDER */
+
+.containerSlider{
+    top: 0;
+    margin: auto;
+    background-color: lightgrey;
+    width: 400px;
+    
+    padding:1px;
+    z-index: -100;
+    
+  }
+  
+  ul, li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+  
+  ul.slider{
+    position: relative; 
+    width: 400px;
+    height: 150px;
+
+    
+  }
+  
+  ul.slider li {
+       position: absolute; 
+      
+      
+      left: 0px;
+      top: 0px;
+      opacity: 0;
+      width: inherit;
+      height: inherit;
+      transition: opacity .5s;
+      background:#fff;
+  }
+  
+  ul.slider li img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  ul.slider li:first-child {
+      opacity: 1; /*Mostramos el primer <li>*/
+  }
+  
+  ul.slider li:target {
+      opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+  }
+  
+  .menuSlider{
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .menuSlider li{
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .menuSlider li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color:#2BE0A4;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 100%;
+    position: relative;
+    top: -10px;
+    z-index: 101;
+  }
+  
+
+/* FIN SECCION SLIDER */
 
 
 
