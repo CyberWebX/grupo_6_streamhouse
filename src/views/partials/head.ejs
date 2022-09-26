@@ -41,6 +41,45 @@
                         <script src="https://kit.fontawesome.com/3c21ea209c.js" crossorigin="anonymous"></script>
          
 
-       
+                        <script>
+                            
+                            var swicheMenu =0;
+
+                            console.log(swicheMenu);
+                           function despliegaMenu(){
+                            
+
+                            if  (swicheMenu==0) {
+                                barra    =document.getElementById("barra");
+                                barraPreSlider =document.getElementById("barraPreSlider");
+                                    
+                                    barra.style.display="flex";
+                                    barra.style.flexdirection="column";
+                                    
+                                    
+                                    
+                                     swicheMenu=1;
+                                } 
+                               else{
+                                    barra    =document.getElementById("barra");
+                                    barraPreSlider =document.getElementById("barraPreSlider");
+                                    
+                                    barra    =document.getElementById("barra");
+                                    barra.style.display="none";
+                                    
+                                    swicheMenu=0;
+
+                               }
+                                
+                         
+
+                           }
+                           
+                           
+                            
+                            
+
+                          
+                </script>
         
 
