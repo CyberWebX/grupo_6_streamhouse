@@ -464,8 +464,13 @@ footer{
 @media (min-width:768px) {
 
     .barraPreSlider {
-        margin-top: 125px;
+        margin-top: 80px;
     }
-
-
+    .menuSlider li a{
+        top: 350px;
+    }
+    .productosUnaColumna{
+        margin-top:400px;
+        
+    }
 }
