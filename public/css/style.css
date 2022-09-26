@@ -308,17 +308,15 @@ footer{
 /* CREAR PRODUCTO */
 
 .bodyCrear {
-    display: flex;
-    position: relative;
 }
 
-.headerCrear {
-    display: flex;
-    position: wrap;
-    flex-wrap: row;
-    justify-content: space-around;
-    color: black;
-    height: 25%;
+.divCrear{
+    background-color: black;
+    height: 75vh;
+}
+
+.pcrear{
+    margin: 15px
 }
 
 .formCrear {
@@ -331,7 +329,7 @@ footer{
     width: 20vw;
     padding: 2vw;
     margin: auto;
-    margin-top: 2.5vw;
+    padding-top: 2.5vw;
     color: white;
 }
 
