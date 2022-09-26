@@ -99,12 +99,7 @@ header{
     font-family:Oxygen;
     
 }
-#relleno {
-    height: 70px;
-    background-color: black;
-    color: yellow;
 
-}
 
 .main-header{
     color: #2BE0A4;
@@ -112,12 +107,13 @@ header{
     
     position: fixed;
     top: 0;
+    z-index: 100;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    
 
     
     
@@ -159,7 +155,7 @@ nav a{
 }
 
 .barraPreSlider {
-    margin-top: 67px;
+    margin-top: 55px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -352,7 +348,8 @@ footer{
     top: 0;
     margin: auto;
     background-color: lightgrey;
-    width: 400px;
+   
+    width: 100%;
     
     padding:1px;
     z-index: -100;
@@ -367,8 +364,8 @@ footer{
   
   ul.slider{
     position: relative; 
-    width: 400px;
-    height: 150px;
+    width: 100%;
+    height: auto;
 
     
   }
@@ -387,8 +384,8 @@ footer{
   }
   
   ul.slider li img{
-    width: 400px;
-    height: 200px;
+    width: 95%;
+    
     object-fit: cover;
   }
   
@@ -403,11 +400,13 @@ footer{
   .menuSlider{
     text-align: center;
     margin: 10px;
+    
   }
   
   .menuSlider li{
     display: inline-block;
     text-align: center;
+    
   }
   
   .menuSlider li a{
@@ -421,29 +420,52 @@ footer{
     font-size: 20px;
     border-radius: 100%;
     position: relative;
-    top: -10px;
+    top: 200px;
     z-index: 101;
+    opacity: 0.75;
   }
   
 
 /* FIN SECCION SLIDER */
 
+/*  productos del home */
+
+.productosUnaColumna{
+    margin-top:200px;
+    
+}
+/* FIN PRODUCTOS DEL HOME*/
 
 
-
-@media (min-width:576px) {
+@media (min-width:520px) {
 
     .productosCuatroColumnas{
         display: flex;
     }
-
-
-
-
+    
 }
+@media (min-width:575px) {
+
+    .barraPreSlider{
+       margin-top: 65PX;
+    }
+    #hamburguer{
+        width: 100%;
+    }
+    .productosUnaColumna{
+        margin-top:300px;
+        
+    }
+    .menuSlider li a{
+        top: 250px;
+    }
+}
+
 @media (min-width:768px) {
 
-
+    .barraPreSlider {
+        margin-top: 125px;
+    }
 
 
 }
