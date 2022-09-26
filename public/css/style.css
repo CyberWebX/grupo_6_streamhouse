@@ -310,13 +310,11 @@ footer{
 .bodyCrear {
     display: flex;
     position: relative;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .headerCrear {
     display: flex;
-    position: relative;
+    position: wrap;
     flex-wrap: row;
     justify-content: space-around;
     color: black;
@@ -335,10 +333,6 @@ footer{
     margin: auto;
     margin-top: 2.5vw;
     color: white;
-}
-
-.footerCrear {
-    height: 25%;
 }
 
 /* FIN CREAR PRODUCTO */
