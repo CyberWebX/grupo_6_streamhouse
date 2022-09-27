@@ -15,21 +15,29 @@
 
         <header>
 
-            <div class="encabezadologo">
-                <img src = "../images/nuevo.png"  class="logo"> </img>
-            </div>
-        
-            <nav class="barra">
-                <a href="" class="c"> Conocenos </a>
-                <a href="" class="ns"> Nuestros Servicios </a>
-                <a href="" class="np"> Nuestros Productos </a>
-                <a href="" class="nc"> Nuestros clientes </a>
-                <a href="" class="g"> Galería </a>
-                <a href="" class="h"> Hablemos </a>
-            </nav> 
+            <%- include('../partials/header'); %>
 
         </header>
+        <br clear="all">   
+        <div class="relleno"></div>
+        
+        <div class="barraPreSlider"  id="barraPreSlider">
+            
+            <%- include('../partials/barraPreSlider'); %>
 
+        </div>
+    
+        <div class="navegacion">    
+                <nav class="barra" id="barra">
+                    
+                    <a href="" class="ns">  Servicios     </a>
+                    <a href="" class="np">  Productos     </a>
+                    <a href="" class="nc">  Clientes      </a>
+                    <a href="" class="g">   Galería       </a>
+                    <a href="" class="c">   Contáctanos   </a>
+                </nav> 
+        </div>
+        
         <main id="maincarrito">
 
             <section class="sectioncarrito">
@@ -70,6 +78,8 @@
         </main>
 
         <footer>
+
+            <%- include('../partials/footer'); %>
 
         </footer>
 
