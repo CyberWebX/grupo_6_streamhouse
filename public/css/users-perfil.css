@@ -1,0 +1,43 @@
+#caja-principal{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.barra-cuenta{
+    display: flex;
+    width:  auto;
+    height: 50px;
+    background-color: gray;
+}
+
+.micuenta{
+    color: white;
+    margin-left: 20px;
+    width: 300px;
+    align-items: center;
+    background-color: blue;
+}
+
+.info-cuenta{
+    color: white;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.caja-datos{
+    display: flex;
+}
+
+.micuenta-caja{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: aqua;
+    margin-left: 20px;
+}
+
+.formulario{
+    margin-left: 20px;
+}
