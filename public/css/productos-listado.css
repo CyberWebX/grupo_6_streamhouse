@@ -2,7 +2,6 @@
 #productos{
     display: flex;
     flex-direction: column;
-    margin-bottom: 200px;
     background-color: grey;
 }
 
@@ -38,7 +37,7 @@
 .texto1-top{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 
 }
 .img2-top{
@@ -53,7 +52,7 @@
 .texto2-top{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img3-top{
@@ -69,7 +68,7 @@
 .texto3-top{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img4-top{
@@ -85,7 +84,7 @@
 .texto4-top{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img5-top{
@@ -101,7 +100,7 @@
 .texto5-top{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 /* Fin lista RECOMENDACIONES */
@@ -139,7 +138,7 @@
 .texto1-tv{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 
 }
 .img2-tv{
@@ -155,7 +154,7 @@
 .texto2-tv{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img3-tv{
@@ -171,7 +170,7 @@
 .texto3-tv{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img4-tv{
@@ -187,7 +186,7 @@
 .texto4-tv{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img5-tv{
@@ -203,7 +202,7 @@
 .texto5-tv{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 /* Fin lista TV */
@@ -241,7 +240,7 @@
 .texto1-audio{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 
 }
 .img2-audio{
@@ -257,7 +256,7 @@
 .texto2-audio{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img3-audio{
@@ -273,7 +272,7 @@
 .texto3-audio{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img4-audio{
@@ -289,7 +288,7 @@
 .texto4-audio{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img5-audio{
@@ -305,7 +304,7 @@
 .texto5-audio{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 /* Fin lista AUDIO */
@@ -343,7 +342,7 @@
 .texto1-mic{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 
 }
 .img2-mic{
@@ -359,7 +358,7 @@
 .texto2-mic{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img3-mic{
@@ -375,7 +374,7 @@
 .texto3-mic{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img4-mic{
@@ -391,7 +390,7 @@
 .texto4-mic{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img5-mic{
@@ -407,7 +406,7 @@
 .texto5-mic{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 /* Fin lista MIC */
@@ -445,7 +444,7 @@
 .texto1-iluminacion{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 
 }
 .img2-iluminacion{
@@ -461,7 +460,7 @@
 .texto2-iluminacion{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img3-iluminacion{
@@ -477,7 +476,7 @@
 .texto3-iluminacion{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img4-iluminacion{
@@ -493,7 +492,7 @@
 .texto4-iluminacion{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 .img5-iluminacion{
@@ -509,7 +508,7 @@
 .texto5-iluminacion{
     background-color: aquamarine;
     width: 300px;
-    text-align: center;
+    padding-left: 10px;
 }
 
 /* Fin lista ILUMINACION */
