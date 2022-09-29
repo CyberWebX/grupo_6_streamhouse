@@ -43,25 +43,33 @@
     border-top: solid 5px greenyellow;
 }
 /* ICONOS */
-.personal-data-icon{
-    color: greenyellow;
-    padding-right: 5px;
-}
 
+.micuenta-icon{
+    color: greenyellow;
+}
 .info-cuenta-icon{
     color: greenyellow;
 }
-.contraseña-icon{
+
+.personal-data-icon{
     color: greenyellow;
     padding-right: 5px;
+    font-size: 20px;
+}
+.contraseña-icon{
+    color: greenyellow;
+    padding-right: 5px;    
+    font-size: 20px;
 }
 .pedidos-icon{
     color: greenyellow;
     padding-right: 5px;
+    font-size: 20px;
 }
 .salir-icon{
     color: greenyellow;
     padding-right: 5px;
+    font-size: 20px;
 }
 /* ICONOS FIN */
 
