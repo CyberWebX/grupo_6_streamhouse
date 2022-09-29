@@ -3,11 +3,11 @@
     flex-direction: column;
     margin-left: 150px;
     margin-right: 150px;
+    margin-bottom: 50px;
 }
 
 .barra-cuenta{
     display: flex;
-    width:  auto;
     height: 50px;
     background-color: gray;
 }
@@ -17,13 +17,16 @@
     margin-left: 20px;
     width: 300px;
     align-items: center;
-    background-color: blue;
+    font-size: 25px;
+    padding-top: 5px;
 }
 
 .info-cuenta{
     color: white;
     margin-left: 20px;
     align-items: center;
+    font-size: 25px;
+    padding-top: 5px;
 }
 
 .caja-datos{
@@ -34,10 +37,93 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    background-color: aqua;
-    margin-left: 20px;
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-top: solid 5px greenyellow;
 }
+/* ICONOS */
+.personal-data-icon{
+    color: greenyellow;
+    padding-right: 5px;
+}
+
+.info-cuenta-icon{
+    color: greenyellow;
+}
+.contraseña-icon{
+    color: greenyellow;
+    padding-right: 5px;
+}
+.pedidos-icon{
+    color: greenyellow;
+    padding-right: 5px;
+}
+.salir-icon{
+    color: greenyellow;
+    padding-right: 5px;
+}
+/* ICONOS FIN */
+
+
+/* Inicio FORMULARIO */
 
 .formulario{
     margin-left: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    padding-left: 10px;
+    width: 900px;
+    border-top: solid 5px greenyellow;
+}
+
+#nombre{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+}
+#apellido{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+}
+#telefono{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+}
+#email{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+}
+#edad{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px; 
+}
+#calendario{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+}
+#pais{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+}
+#ciudad{
+    margin-bottom: 5px;
+    width: 300px;
+    height: 30px;
+}
+#confirmar-btn{
+    margin-bottom: 5px;
+    width: 150px;
+    height: 30px;
+}
+#cancelar-btn{
+    margin-bottom: 5px;
+    width: 150px;
+    height: 30px;
 }

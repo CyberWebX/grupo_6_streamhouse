@@ -20,77 +20,59 @@
     <div id="caja-principal">
         <div class="barra-cuenta">
             <div class="micuenta">
-               <h4>MI CUENTA</h4>
+                <i class="bi bi-person-circle personal-data-icon"></i>MI CUENTA
             </div>
             <div class="info-cuenta">
-                <h4>INFORMACION DE MI CUENTA</h4>
+                <i class="bi bi-info-circle info-cuenta-icon"></i>  INFORMACION DE MI CUENTA
             </div>
         </div>
         <div class="caja-datos">
             <div class="micuenta-caja">
                 <br>
-                <strong>Mis datos personales</strong>
+                <strong><i class="bi bi-person-circle personal-data-icon"></i>  Mis datos personales</strong>
                 <br>
-                <strong>Modificar mi contraseña</strong>
+                <strong><i class="bi bi-lock-fill contraseña-icon"></i>  Modificar mi contraseña</strong>
                 <br>
-                <strong>Mis pedidos</strong>
+                <strong><i class="bi bi-cart-fill pedidos-icon"></i>  Mis pedidos</strong>
                 <br>
-                <strong>Salir</strong>
+                <strong><i class="bi bi-box-arrow-left salir-icon"></i>  Salir</strong>
             </div>
             <div class="formulario">
-                INFOOOOOOOOOOOOOOOOOOOOOOO
                 <form action="" method="POST">
-                  
-                  <label for="nombre"></label>
-                  <input type="text" name="usuario" placeholder="nombre" id="nombre"/>
-                  <br>
-                  <input type="password" placeholder="clave"  name="clave" />
-                  <br>
-                  <input type="tel" placeholder="telefono"  name="telefono" id="jo" />
-                  <br>
-                  <input type="email" placeholder="e-mail"  name="email" required/>
-                  <br>
-                  <input type="number" placeholder="edad"  name="edad" />
-                  <br>
-            
-                  <input type="date" min="2021-01-01" max="2021-05-01" name="fecha" />
-                  <br>
-                  
-                  <input type="file" name="archivo" accept=".jpg" />
-                  <br>
-                   
-                  <label> Debito </label>
-                  <input type="radio" name="pago" value="Debito"  >  
-                  <label> Credito </label>
-                  <input type="radio" name="pago" value="Credito" checked/> 
-                  <label> Otro </label>
-                  <input type="radio" name="pago" value="Otro" /> 
-                  
-                  <br>
-                  
-                  <label> Servicio 1 </label>
-                  <input type="checkbox" name="combo" id="check1" value="Primero" />
-                  <label> Servicio 2 </label>
-                  <input type="checkbox" name="combo" id="check2" value="Segundo" />
-                  
-                  
-                  <br>
-                  <textarea name="comentario"> </textarea>
                     <br>
-                  
-                    
-                    <label> cantidad </label>
-                  
-                  <select>
-                    <option>Uno</option>
-                    <option selected>Dos</option>
-                  </select>
-                    
-            
-                  <br>
-                  <button id="boton1" type="reset"> Reiniciar </button>
-                  <button type="submit"> Enviar </button>        
-                  
+                    Nombre
+                    <br>
+                    <input type="text" name="usuario" placeholder="Nombre" id="nombre"/>
+                    <br>
+                    Apellido
+                    <br>
+                    <input type="text" name="usuario" placeholder="Apellido" id="apellido"/>
+                    <br>
+                    Teléfono
+                    <br>
+                    <input type="tel" placeholder="telefono"  name="telefono" id="telefono" />
+                    <br>
+                    E-mail
+                    <br>
+                    <input type="email" placeholder="E-mail"  name="email" required id="email"/>
+                    <br>
+                    Edad
+                    <br>
+                    <input type="number" placeholder="Edad"  name="edad" id="edad" />
+                    <br>
+                    <input type="date" min="2021-01-01" max="2021-05-01" name="fecha" id="calendario"/>
+                    <br>
+                    País
+                    <br>
+                    <input type="text" name="usuario" placeholder="País" id="pais"/>
+                    <br>
+                    Ciudad
+                    <br>
+                    <input type="text" name="usuario" placeholder="Ciudad" id="ciudad"/>
+                    <br>
+                    <br>
+                    <button id="confirmar-btn" type="reset" class="btn btn-success"> Confirmar </button>
+                    <button id="cancelar-btn" type="submit" class="btn btn-success"> Cancelar </button> 
                 </form>
             </div>
         </div>
