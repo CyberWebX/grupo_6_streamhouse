@@ -3,12 +3,9 @@
 /* CREAR PRODUCTO */
 
 .divCrear{
+    display: flex;
     background-color: black;
     height: 75vh;
-}
-
-.pcrear{
-    margin: 15px
 }
 
 .formCrear {
