@@ -14,6 +14,8 @@ h1,h2,h3,h4,h5,h6{
 
 .main-login-registro{
     height: 65vh;
+    align-items: center;
+    justify-items: center;
 }
 
 .form-registro h4 {
@@ -31,6 +33,8 @@ h1,h2,h3,h4,h5,h6{
     margin: auto;
     margin-top: 2.5vw;
     color: white;
+    align-items: center;
+    justify-items: center;
 }
 
 .casilla {
