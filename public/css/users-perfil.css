@@ -6,6 +6,10 @@
     margin-bottom: 50px;
 }
 
+.main-perfil{
+    height: 69vh;
+}
+
 .barra-cuenta{
     display: flex;
     height: 50px;

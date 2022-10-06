@@ -1,51 +1,51 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
-<head>
-    <%- include('../partials/head'); %>
-    <!-- Crear -->
-    <link rel="stylesheet" href="../css/crear.css">
-</head>
-  
-
-
-<body >
+    <head>
+        <%- include('../partials/head'); %>
+        <!-- Crear -->
+        <link rel="stylesheet" href="../css/crear.css">
+    </head>
     
-    <header>
-        <%- include('../partials/header'); %>     
-    </header>
-     
-    <br clear="all">   
-    <div class="relleno"></div>
-    
-    <div class="barraPreSlider"  id="barraPreSlider">
-        <%- include('../partials/barraPreSlider'); %>
-    </div>
+    <body >
+        
+        <header>
 
-    <main>
-        <div class= "divCrear">
-            <form class="formCrear" action="resultado.html" method="POST">
-                <h4>Crear producto</h4>
-                <input class="casilla" type="text" name="nombres" id="nombres" placeholder="Nombre del producto:">    
-                <input class="casilla" type="text" name="apellidos" id="apellidos" placeholder="Precio:">
-                <input class="casilla" type="number" name="number" id="number" placeholder="Descuento:">
-                <select class="casilla" type="text" name="text" id="text" placeholder="Categoría:">
-                    <option value="">Elegí</option>
-                    <option value="in-sale">En oferta</option>
-                    <option value="visited">Ultimos agregados</option>
-                </select>
-                <input class="casilla" type="text" name="text" id="text" placeholder="Descripción:">
-                <input type="file" name="image" id="image">
-                <br>
-                <button class="casilla" type="submit">Guardar</button>
-            </form>
-        </div>
-    </main>
+            <%- include('../partials/header'); %> 
 
-    <footer>
-        <%- include('../partials/footer'); %>
-    </footer>
+        </header>
+        
+        <main>
 
-</body>
+            <div class= "divCrear">
+
+                <form class="formCrear" action="resultado.html" method="POST">
+                    <h4>Crear producto</h4>
+                    <input class="casilla" type="text" name="nombres" id="nombres" placeholder="Nombre del producto:">    
+                    <input class="casilla" type="text" name="apellidos" id="apellidos" placeholder="Precio:">
+                    <input class="casilla" type="number" name="number" id="number" placeholder="Descuento:">
+                    <select class="casilla" type="text" name="text" id="text" placeholder="Categoría:">
+                        <option value="">Elegí</option>
+                        <option value="in-sale">En oferta</option>
+                        <option value="visited">Ultimos agregados</option>
+                    </select>
+                    <input class="casilla" type="text" name="text" id="text" placeholder="Descripción:">
+                    <input type="file" name="image" id="image">
+                    <br>
+                    <button class="casilla" type="submit">Guardar</button>
+                </form>
+                
+            </div>
+
+        </main>
+
+        <footer>
+
+            <%- include('../partials/footer'); %>
+
+        </footer>
+
+    </body>
 
 </html>

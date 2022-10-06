@@ -2,7 +2,7 @@
 #productos{
     display: flex;
     flex-direction: column;
-    background-color: grey;
+    background-color: #21232A;
 }
 
 /* Inicio lista RECOMENDACIONES */
@@ -14,7 +14,7 @@
 .titulo-top{
     padding-left: 80px;
     margin-top: 50px;
-    color: black
+    color: #d2d8e9
 }
 .productos-top{
     display: flex;
@@ -115,7 +115,7 @@
     padding-left: 80px;
     margin-top: 50px;
     border-top: black 2px solid;
-    color: black
+    color: #d2d8e9
 }
 .productos-tv{
     display: flex;
@@ -217,7 +217,7 @@
     padding-left: 80px;
     margin-top: 50px;
     border-top: black 2px solid;
-    color: black
+    color: #d2d8e9
 }
 .productos-audio{
     display: flex;
@@ -319,7 +319,7 @@
     padding-left: 80px;
     margin-top: 50px;
     border-top: black 2px solid;
-    color: black
+    color: #d2d8e9
 }
 .productos-mic{
     display: flex;
@@ -421,7 +421,7 @@
     padding-left: 80px;
     margin-top: 50px;
     border-top: black 2px solid;
-    color: black
+    color: #d2d8e9
 }
 .productos-iluminacion{
     display: flex;
