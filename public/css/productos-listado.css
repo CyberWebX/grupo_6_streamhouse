@@ -1,0 +1,514 @@
+
+#productos{
+    display: flex;
+    flex-direction: column;
+    background-color: #21232A;
+}
+
+/* Inicio lista RECOMENDACIONES */
+
+.lista-top{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-top{
+    padding-left: 80px;
+    margin-top: 50px;
+    color: #d2d8e9
+}
+.productos-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.img1-top{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/41pxnTgNBQL.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto1-top{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+
+}
+.img2-top{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/717L9X+mvTL._AC_SL1500_.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-color: white;
+    border: 2px solid black;}
+.texto2-top{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img3-top{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/altavoces-62daab2b0b1f9.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto3-top{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img4-top{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/laptop-gamer-5bdcd4f039150.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto4-top{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img5-top{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/laptop-gamer-5bdcd4f039150.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto5-top{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+/* Fin lista RECOMENDACIONES */
+
+/* Inicio lista TV */
+
+.lista-tv{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-tv{
+    padding-left: 80px;
+    margin-top: 50px;
+    border-top: black 2px solid;
+    color: #d2d8e9
+}
+.productos-tv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.img1-tv{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/samsung\ 43.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto1-tv{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+
+}
+.img2-tv{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/philips55.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto2-tv{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img3-tv{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/samsung50.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto3-tv{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img4-tv{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/xiami43.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto4-tv{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img5-tv{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/samsung\ 43.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto5-tv{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+/* Fin lista TV */
+
+/* Inicio lista AUDIO */
+
+.lista-audio{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-audio{
+    padding-left: 80px;
+    margin-top: 50px;
+    border-top: black 2px solid;
+    color: #d2d8e9
+}
+.productos-audio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.img1-audio{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/eksa.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto1-audio{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+
+}
+.img2-audio{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/kotion.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto2-audio{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img3-audio{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/kotionled.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto3-audio{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img4-audio{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/reddragon.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto4-audio{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img5-audio{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/reddragonmic.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto5-audio{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+/* Fin lista AUDIO */
+
+/* Inicio lista MIC */
+
+.lista-mic{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-mic{
+    padding-left: 80px;
+    margin-top: 50px;
+    border-top: black 2px solid;
+    color: #d2d8e9
+}
+.productos-mic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;    
+    padding-bottom: 50px;
+}
+
+.img1-mic{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/reddragonmic.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto1-mic{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+
+}
+.img2-mic{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/hyperx.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto2-mic{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img3-mic{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/hyperxmic.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto3-mic{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img4-mic{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/soulmic.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto4-mic{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img5-mic{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/ledwiz.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto5-mic{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+/* Fin lista MIC */
+
+/* Inicio lista ILUMINACION */
+
+.lista-iluminacion{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-iluminacion{
+    padding-left: 80px;
+    margin-top: 50px;
+    border-top: black 2px solid;
+    color: #d2d8e9
+}
+.productos-iluminacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.img1-iluminacion{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/arovorago.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto1-iluminacion{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+
+}
+.img2-iluminacion{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/lednoga.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto2-iluminacion{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img3-iluminacion{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/ledbarra.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto3-iluminacion{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img4-iluminacion{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/ledwiz.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto4-iluminacion{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.img5-iluminacion{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/listado-productos/ledwiz.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border: 2px solid black;
+    background-color: white;
+}
+.texto5-iluminacion{
+    background-color: aquamarine;
+    width: 300px;
+    padding-left: 10px;
+}
+
+/* Fin lista ILUMINACION */
