@@ -7,6 +7,7 @@ const router = express.Router();
 
 
 
+
 router.get("/enconstruccion", controladorEnconstruccion.enconstruccion);
 
 //Exportar
