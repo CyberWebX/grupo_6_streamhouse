@@ -141,6 +141,7 @@ header{
     margin-top: 0px;
     justify-content: space-between;
     text-align: center;
+    
 }
 
 .lista-header{
@@ -211,11 +212,12 @@ footer{
 .pie{
     
     
-    display: flex;
+    display: block;
     justify-content: space-between;
     color: white;
     font-size: 8px;
     align-items: center;
+    background-color: black;
 }
 
 .telefono{
@@ -258,99 +260,9 @@ footer{
 
 
 
-/* COMIENZO SECCION SLIDER */
 
-.containerSlider{
-    top: 0;
-    margin: auto;
-    background-color: lightgrey;
-   
-    width: 100%;
-    
-    padding:1px;
-    z-index: -100;
-    
-  }
-  
-  ul, li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-  }
-  
-  ul.slider{
-    position: relative; 
-    width: 100%;
-    height: auto;
 
-    
-  }
-  
-  ul.slider li {
-       position: absolute; 
-      
-      
-      left: 0px;
-      top: 0px;
-      opacity: 0;
-      width: inherit;
-      height: inherit;
-      transition: opacity .5s;
-      background:#fff;
-  }
-  
-  ul.slider li img{
-    width: 100%;
-    
-    object-fit: cover;
-  }
-  
-  ul.slider li:first-child {
-      opacity: 1; /*Mostramos el primer <li>*/
-  }
-  
-  ul.slider li:target {
-      opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
-  }
-  
-  .menuSlider{
-    text-align: center;
-    margin: 10px;
-    
-  }
-  
-  .menuSlider li{
-    display: inline-block;
-    text-align: center;
-    
-  }
-  
-  .menuSlider li a{
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color:#2BE0A4;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 100%;
-    position: relative;
-    top: 200px;
-    z-index: 101;
-    opacity: 0.75;
-  }
-  
 
-/* FIN SECCION SLIDER */
-
-/*  productos del home */
-
-.productosUnaColumna{
-    margin-top:200px;
-    
-}
-/* FIN PRODUCTOS DEL HOME*/
 
 
 @media (min-width:520px) {
@@ -358,6 +270,7 @@ footer{
     .productosCuatroColumnas{
         display: flex;
     }
+    
     
 }
 @media (min-width:575px) {
@@ -375,6 +288,7 @@ footer{
     .menuSlider li a{
         top: 250px;
     }
+
 }
 
 @media (min-width:768px) {
@@ -388,6 +302,9 @@ footer{
     .productosUnaColumna{
         margin-top:400px;
         
+    }
+    .barra{
+        display: flex;
     }
 }
 @media (min-width:1024px) {
@@ -422,6 +339,7 @@ footer{
     }
     .main-header {
         position: static;
+       
     }
     
 }
