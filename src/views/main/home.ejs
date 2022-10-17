@@ -39,66 +39,38 @@
                 </ul>
 
             </div>
-                
+              
+            
+
             <div class="productosUnaColumna" >
                 
                 <div class="productosDosColumna">
                     
                     <div class="productosCuatroColumnas">
                         
+                        <% for(let p of productos) { %>
+
                         <div class="producto">
                             
-                            <img class="imgProducto"  src="./images/productos/microfono-gaming-5d5ec2fd0b665.jpg" alt="">
+                            <img class="imgProducto"  src="./images/productos/<%= p.image %>" alt="">
                             <div class="valorYDescuento">
-                                <span>$25.200 </span> 
+                                <span>$<%= p.price %></span> 
                             </div>
                             <div class="nombreProducto">
-                                <span>Microfono Microsooft"</span>
+                                <span><%= p.name %></span>
                             </div>
 
                         </div>
 
-                        <div class="producto">
-
-                            <img class="imgProducto"  src="./images\listado-productos\laptop-gamer-5bdcd4f039150.jpg" alt="">
-                            <div class="valorYDescuento">
-                                <span>$85.200 </span> 
-                            </div>
-                            <div class="nombreProducto">
-                                <span>Portatil Gamer"</span>
-                            </div>
-
-                        </div>
-
-                        <div class="producto">
-
-                            <img class="imgProducto"  src="./images/productos/monitor-gamer-5bdcd3a987148.jpg" alt="">
-                            <div class="valorYDescuento">
-                                <span>$55.000 </span> 
-                            </div>
-                            <div class="nombreProducto">
-                                <span> Monitor 14" </span>
-                            </div>
-
-                        </div>          
-
-                        <div class="producto">
-
-                            <img class="imgProducto"  src="./images/productos/ordenador-gamer-5bdcd50468f13.jpg" alt="">
-                            <div class="valorYDescuento">
-                                <span>$90.500 </span> 
-                            </div>
-                            <div class="nombreProducto">
-                                <span>Computador Corei5 11va Generación"</span>
-                            </div>
-
-                        </div>
-                                                        
+                        <% } %>    
+                        
                     </div>
 
                 </div>
 
             </div>
+
+            
 
         </main>
 
@@ -111,3 +83,6 @@
     </body>
    
 <html>
+
+
+

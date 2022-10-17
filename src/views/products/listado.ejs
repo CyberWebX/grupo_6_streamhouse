@@ -27,6 +27,9 @@
                 <div class="titulo-top">
                     <h2><strong>Productos Destacados</strong></h2>
                 </div>
+
+                <% for(let p of productos) { %>
+
                 <div class="productos-top">     
                     <div class="producto1-top"> 
                         <div class="img1-top">
@@ -34,57 +37,18 @@
                         <div class="texto1-top">
                             <i class="bi bi-truck truck"></i>
                             <br>
-                            <strong>$45000</strong>
+                            <strong>$<%= p.price %></strong>
                             <br>
-                            <LAbel style="color: #39b54a;">10% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Silla Gamer PRO - Marathon</strong>
-                        </div>
-                    </div>
-                    <div class="producto2-top"> 
-                        <div class="img2-top">
-                        </div>
-                        <div class="texto2-top">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$12500</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">10% off</LAbel>
+                            <LAbel style="color: #39b54a;"><%= p.discount %> % OFF</LAbel>
                             <br>
                             <br>
-                            <strong>Teclado Gamer RGB - HyperX</strong>
-                        </div>
-                    </div>
-                    <div class="producto3-top"> 
-                        <div class="img3-top">
-                        </div>
-                        <div class="texto3-top">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$85000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">30% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>SET Parlantes Bluetooth - XINUA</strong>
-                        </div>
-                    </div>
-                    <div class="producto4-top"> 
-                        <div class="img4-top">
-                        </div>
-                        <div class="texto4-top">
-                            <i class="bi bi-truck truck"></i>
-                            <br>
-                            <strong>$180000</strong>
-                            <br>
-                            <LAbel style="color: #39b54a;">40% off</LAbel>
-                            <br>
-                            <br>
-                            <strong>Notebook Gamer - MSI Thin GF63 negra 15.6"</strong>
+                            <strong><%= p.name %></strong>
                         </div>
                     </div>
                 </div>
+                
+                <% } %> 
+
             </div>
             
             <!-- Fin lista RECOMENDACIONES -->

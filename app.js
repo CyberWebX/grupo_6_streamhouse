@@ -8,6 +8,15 @@ const rutasProducts         = require ("./src/routes/routes.products.js")
 const rutasUsers            = require ("./src/routes/routes.users.js")
 const rutasEnConstruccion   = require ("./src/routes/routes.enconstruccion.js")
 
+// ordernar CRUD // 
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+
 //templete engine
 
 app.set('views', path.join(__dirname,'./src/views'))

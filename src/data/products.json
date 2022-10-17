@@ -1,0 +1,29 @@
+[
+ {
+  "id": 1,
+  "name": "Portatil Gamer",
+  "price": 85.2,
+  "discount": 10,
+  "category": "in-sale",
+  "description": "",
+  "image": "laptop-gamer-5bdcd4f039150.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Monitor 14",
+  "price": 22500,
+  "discount": 3,
+  "category": "in-sale",
+  "description": "",
+  "image": "monitor-gamer-5bdcd3a987148.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Computador Core i5 11va Generación",
+  "price": 150000,
+  "discount": 6,
+  "category": "in-sale",
+  "description": "",
+  "image": "ordenador-gamer-5bdcd50468f13.jpg"
+ }
+]
