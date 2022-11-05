@@ -1,3 +1,5 @@
+const {validationResult} = require('express-validator');
+
 const controladorUsuarios = {
 
     login: function (req, res){
