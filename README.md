@@ -2,10 +2,6 @@
 
 Tematica y descripcion: 
 > Venta de setups para gamming y streaming.
-> 
-> Servicio de streaming para eventos.
-> 
-> Alquiler de salas equipadas para streaming según preferencias.
 
 
 Publico objetivo: 
