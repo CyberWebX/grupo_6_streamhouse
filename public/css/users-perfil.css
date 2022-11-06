@@ -1,141 +1,412 @@
 #caja-principal{
-    display: flex;
-    flex-direction: column;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 50px;
-}
-
-.main-perfil{
-    height: 69vh;
-}
-
-.barra-cuenta{
-    display: flex;
-    height: 50px;
-    background-color: gray;
-}
-
-.micuenta{
-    color: white;
-    margin-left: 20px;
-    width: 300px;
-    align-items: center;
-    font-size: 25px;
-    padding-top: 5px;
-}
-
-.info-cuenta{
-    color: white;
-    margin-left: 20px;
-    align-items: center;
-    font-size: 25px;
-    padding-top: 5px;
-}
-
-.caja-datos{
-    display: flex;
+    width: 100%;
 }
 
 .micuenta-caja{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin-top: 20px;
-    padding-left: 10px;
-    font-size: 15px;
-    border-top: solid 5px greenyellow;
+    display: none;
 }
-/* ICONOS */
 
-.micuenta-icon{
-    color: greenyellow;
+.micuenta{
+    display: none;
 }
+
+.info-cuenta{
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
 .info-cuenta-icon{
     color: greenyellow;
+    padding-right: 10px;
 }
-
-.personal-data-icon{
-    color: greenyellow;
-    padding-right: 5px;
-    font-size: 20px;
-}
-.contraseña-icon{
-    color: greenyellow;
-    padding-right: 5px;    
-    font-size: 20px;
-}
-.pedidos-icon{
-    color: greenyellow;
-    padding-right: 5px;
-    font-size: 20px;
-}
-.salir-icon{
-    color: greenyellow;
-    padding-right: 5px;
-    font-size: 20px;
-}
-/* ICONOS FIN */
-
-
-/* Inicio FORMULARIO */
 
 .formulario{
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 15px;
-    padding-left: 10px;
-    width: 900px;
-    border-top: solid 5px greenyellow;
+    font-size: 16px;
+    border-top: solid greenyellow 5px;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #nombre{
+    width: 100%;
     margin-bottom: 5px;
-    width: 300px;
-    height: 30px;
 }
 #apellido{
+    width: 100%;
     margin-bottom: 5px;
-    width: 300px;
-    height: 30px;
 }
 #telefono{
+    width: 100%;
     margin-bottom: 5px;
-    width: 300px;
-    height: 30px;
 }
 #email{
+    width: 100%;
     margin-bottom: 5px;
-    width: 300px;
-    height: 30px;
 }
 #edad{
+    width: 100%;
     margin-bottom: 5px;
-    width: 300px;
-    height: 30px; 
 }
 #calendario{
+    width: 100%;
     margin-bottom: 5px;
-    width: 300px;
-    height: 30px;
 }
 #pais{
+    width: 100%;
     margin-bottom: 5px;
-    width: 300px;
-    height: 30px;
 }
 #ciudad{
+    width: 100%;
     margin-bottom: 5px;
-    width: 300px;
-    height: 30px;
+}
+
+.botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 #confirmar-btn{
-    margin-bottom: 5px;
-    width: 150px;
-    height: 30px;
+    width: 100%;
+    margin-right: 3px;
 }
+
 #cancelar-btn{
-    margin-bottom: 5px;
-    width: 150px;
-    height: 30px;
+    width: 100%;
+    background-color: grey;
+    margin-left: 3px;
 }
+
+
+/* --------------------------------INICIO PARA PANTALLAS TABLET------------------------- */
+
+@media(min-width: 480px){
+    #caja-principal{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    
+    .barra-cuenta{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background-color: gray;
+    }
+    
+    .micuenta{
+        display: flex;
+        padding-left: 1vw;
+        color: white;
+        width: 30vw;
+        align-items: center;
+        font-size: 18px;
+        padding-top: 5px;
+    }
+    
+    .info-cuenta{
+        width: 70vw;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 1.5vw;
+        color: white;
+        align-items: center;
+        font-size: 18px;
+        padding-top: 5px;
+        border-left: 1px white solid;
+    }
+    
+    .caja-datos{
+        display: flex;
+        width: 100%;
+    }
+    
+    .micuenta-caja{
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        margin-top: 20px;
+        padding-left: 1vw;
+        font-size: 16px;
+        border-top: solid 5px greenyellow;
+        margin-right: 1vw;
+    }
+    /* ICONOS */
+    
+    .micuenta-icon{
+        color: greenyellow;
+        padding-right: 5px;
+    }
+    .info-cuenta-icon{
+        color: greenyellow;
+        padding-right: 5px;
+    }
+    
+    .personal-data-icon{
+        color: greenyellow;
+        padding-right: 5px;
+        font-size: 20px;
+    }
+    .contraseña-icon{
+        color: greenyellow;
+        padding-right: 5px;    
+        font-size: 20px;
+    }
+    .pedidos-icon{
+        color: greenyellow;
+        padding-right: 5px;
+        font-size: 20px;
+    }
+    .salir-icon{
+        color: greenyellow;
+        padding-right: 5px;
+        font-size: 20px;
+    }
+    /* ICONOS FIN */
+    
+    
+    /* Inicio FORMULARIO */
+    
+    .formulario{
+        margin-top: 20px;
+        font-size: 16px;
+        width: 70vw;
+        padding-right: 10vw;
+        flex-grow: 1;
+        border-top: solid 5px greenyellow;
+        padding-bottom: 40px;
+    }
+    
+    #nombre{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 30px;
+    }
+    #apellido{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 30px;
+    }
+    #telefono{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 30px;
+    }
+    #email{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 30px;
+    }
+    #edad{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 30px; 
+    }
+    #calendario{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 30px;
+    }
+    #pais{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 30px;
+    }
+    #ciudad{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 30px;
+    }
+    #confirmar-btn{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 40px;
+    }
+    #cancelar-btn{
+        margin-bottom: 5px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .botones{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+
+/* ----------------------------------INICIO PARA PANTALLAS DE ESCRITORIO--------------------------- */
+@media(min-width: 1024px){
+    #caja-principal{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    
+    .barra-cuenta{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background-color: gray;
+    }
+    
+    .micuenta{
+        display: flex;
+        padding-left: 1vw;
+        color: white;
+        width: 30vw;
+        align-items: center;
+        font-size: 24px;
+        padding-top: 5px;
+    }
+    
+    .info-cuenta{
+        width: 70vw;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 1.5vw;
+        color: white;
+        align-items: center;
+        font-size: 24px;
+        padding-top: 5px;
+        border-left: 1px white solid;
+    }
+    
+    .caja-datos{
+        display: flex;
+        width: 100%;
+    }
+    
+    .micuenta-caja{
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        margin-top: 20px;
+        padding-left: 1vw;
+        font-size: 20px;
+        border-top: solid 5px greenyellow;
+        margin-right: 1vw;
+    }
+    /* ICONOS */
+    
+    .micuenta-icon{
+        color: greenyellow;
+        padding-right: 5px;
+    }
+    .info-cuenta-icon{
+        color: greenyellow;
+        padding-right: 5px;
+    }
+    
+    .personal-data-icon{
+        color: greenyellow;
+        padding-right: 5px;
+        font-size: 20px;
+    }
+    .contraseña-icon{
+        color: greenyellow;
+        padding-right: 5px;    
+        font-size: 20px;
+    }
+    .pedidos-icon{
+        color: greenyellow;
+        padding-right: 5px;
+        font-size: 20px;
+    }
+    .salir-icon{
+        color: greenyellow;
+        padding-right: 5px;
+        font-size: 20px;
+    }
+    /* ICONOS FIN */
+    
+    
+    /* Inicio FORMULARIO */
+    
+    .formulario{
+        margin-top: 20px;
+        font-size: 20px;
+        width: 70vw;
+        border-top: solid 5px greenyellow;
+        padding-bottom: 40px;
+    }
+    
+    #nombre{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 30px;
+    }
+    #apellido{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 30px;
+    }
+    #telefono{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 30px;
+    }
+    #email{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 30px;
+    }
+    #edad{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 30px; 
+    }
+    #calendario{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 30px;
+    }
+    #pais{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 30px;
+    }
+    #ciudad{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 30px;
+    }
+    #confirmar-btn{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 40px;
+    }
+    #cancelar-btn{
+        margin-bottom: 5px;
+        width: 55vw;
+        height: 40px;
+    }
+
+    .botones{
+        width: 45%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

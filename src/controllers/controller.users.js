@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 const bcryptjs = require('bcryptjs');
 const {validationresuilt}= require('express-validator');
 const User = require ('../models/User');
+=======
+const {validationResult} = require('express-validator');
+>>>>>>> 1e32ee3efb29d2776239b33100074e97697743d7
 
 const controladorUsuarios = {
 
