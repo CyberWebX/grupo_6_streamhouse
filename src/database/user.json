@@ -1,0 +1,16 @@
+[
+ {
+  "id": 1,
+  "fullName": "Mario Rovira",
+  "email": "xrovmario@yahoo.es",
+  "password": "",
+  "avatar": "default.png"
+ },
+ {
+    "id": 2,
+    "fullName":"Ignacio Villanueva",
+    "email":"ignacio@gmail.com",
+    "password":"",
+    "avatar":"default.png"   
+}
+]
