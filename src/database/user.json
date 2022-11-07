@@ -1,16 +1,10 @@
 [
  {
   "id": 1,
-  "fullName": "Mario Rovira",
-  "email": "xrovmario@yahoo.es",
-  "password": "",
+  "nombres": "mario",
+  "apellidos": "Rovira",
+  "email":"xrovmario@yahoo.es",
+  "password": "$2a$10$kQJM3niPDYrbtpz6Openhe9f5iy.Py8rv2pKdVonaPucmH1r5Ch9a",
   "avatar": "default.png"
- },
- {
-    "id": 2,
-    "fullName":"Ignacio Villanueva",
-    "email":"ignacio@gmail.com",
-    "password":"",
-    "avatar":"default.png"   
-}
+ }
 ]

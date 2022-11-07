@@ -1,12 +1,12 @@
 const express = require ('express');
-
 const router = express.Router();
+const bcryptjs = require('bcryptjs');
 
 const fs = require('fs');
 
 
 const User = {
-    fileName:'./database/user.json',
+    fileName:'../database/user.json',
     getData: function () {
         return JSON.parse(fs.readFileSync(this.fileName,'utf-8'));
     },
@@ -40,9 +40,10 @@ const User = {
         let allUsers = this.findAll();
         let newUser  = {
             id: this.generateId(),
-            ...userData
+            ...userData,
+            password: bcryptjs.hashSync(userData.password,10)
         }
-        allUsers.push(userData);
+        allUsers.push(newUser);
         fs.writeFileSync(this.fileName,JSON.stringify(allUsers,null, ' '));
         return newUser;
 
@@ -55,6 +56,6 @@ const User = {
         return true;
     }
 }
-
-//onsole.log(User.delete(2));
+//console.log(User.generateId());
+//console.log(User.create({"nombres":"mario","apellidos":"Rovira","password":"123456","avatar":"default.png"}));
 module.exports = User;

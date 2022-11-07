@@ -1,13 +1,18 @@
 const express = require ('express');
 const path = require ('path');
 const app = express();
-
+const session = require('express-session');
 
 const rutasMain             = require("./src/routes/routes.main.js")
 const rutasProducts         = require ("./src/routes/routes.products.js")
 const rutasUsers            = require ("./src/routes/routes.users.js")
 const rutasEnConstruccion   = require ("./src/routes/routes.enconstruccion.js")
 
+app.use(session({
+    secret: "Shh, Its a secret",
+    resave:false,
+    saveUninitialized:false,
+}));
 // ordernar CRUD // 
 
 app.use(express.urlencoded({ extended: false }));

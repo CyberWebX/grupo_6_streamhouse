@@ -21,16 +21,21 @@
         <main class= "main-login-registro">
 
             <section class="form-registro">
+                <form action="/users/registro" method="POST" enctype="multipart/form-data"> 
+                    <h4>Registro de Usuario</h4>
+                    <input class="casilla" type="text" name="nombres" id="nombres" placeholder="Nombres">    
+                    <input class="casilla" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                    <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico">
+                    <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña">
+                    <input class="casilla" type="password" name="password2" id="password2" placeholder="Repita contraseña">
+                    <input class="casilla" type="file" name="avatar">
+                    <div class="cont-botón">
+                        <input class="botón" type="submit" value="Registrarme">
+                    </div>
 
-                <h4>Registro de Usuario</h4>
-                <input class="casilla" type="text" name="nombres" id="nombres" placeholder="Nombres">    
-                <input class="casilla" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-                <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico">
-                <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña">
-                <input class="casilla" type="password" name="password2" id="password2" placeholder="Repita contraseña">
-                <div class="cont-botón">
-                    <input class="botón" type="submit" value="Registrarme">
-                </div>
+
+                </form>
+                
 
             </section>
 
