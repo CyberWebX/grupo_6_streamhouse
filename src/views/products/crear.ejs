@@ -5,7 +5,7 @@
     <head>
         <%- include('../partials/head'); %>
         <!-- Crear -->
-        <link rel="stylesheet" href="../css/crear.css">
+        <link rel="stylesheet" href="/css/crear.css">
     </head>
     
     <body >
@@ -31,7 +31,12 @@
                         <option value="visited">Ultimos agregados</option>
                     </select>
                     <input class="casilla" type="text" name="description" id="text" placeholder="Descripción:">
-                    <input type="file" name="newimage" id="image">
+                    
+                    <div>
+						<label for="newimage" class="form-label">Cargar Imagen</label>
+						<input type="file" name="newimage" id="image"></input>
+					</div>
+
                     <br>
                     <button class="casilla" type="submit">Guardar</button>
                 </form>

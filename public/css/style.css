@@ -364,6 +364,7 @@ footer{
 
     .productosCuatroColumnas{
         display: flex;
+        justify-content: space-around;
     }
     
     

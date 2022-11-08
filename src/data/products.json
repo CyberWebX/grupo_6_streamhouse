@@ -2,20 +2,11 @@
  {
   "id": 1,
   "name": "Portatil Gamer",
-  "price": 85.2,
+  "price": 85200,
   "discount": 10,
   "category": "in-sale",
-  "description": "",
+  "description": "NOTEBOOK APPLE MACBOOK PRO M1 PRO 16GB 1TB 16 SILVER",
   "image": "laptop-gamer-5bdcd4f039150.jpg"
- },
- {
-  "id": 2,
-  "name": "Monitor 14",
-  "price": 22500,
-  "discount": 3,
-  "category": "in-sale",
-  "description": "",
-  "image": "monitor-gamer-5bdcd3a987148.jpg"
  },
  {
   "id": 3,
@@ -23,7 +14,61 @@
   "price": 150000,
   "discount": 6,
   "category": "in-sale",
-  "description": "",
-  "image": "ordenador-gamer-5bdcd50468f13.jpg"
+  "description": "PC INTEL GAMER KAIROS ULTIMATE I7 10700F 16GB SSD 240GB RTX 3070",
+  "image": "laptop-gamer-5bdcd4f039150.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Portatil Gamer",
+  "price": 85200,
+  "discount": 10,
+  "category": "in-sale",
+  "description": "NOTEBOOK APPLE MACBOOK PRO M1 PRO 16GB 1TB 16 SILVER",
+  "image": "laptop-gamer-5bdcd4f039150.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Computador Core i5 11va Generación",
+  "price": 150000,
+  "discount": 6,
+  "category": "in-sale",
+  "description": "PC INTEL GAMER KAIROS ULTIMATE I7 10700F 16GB SSD 240GB RTX 3070",
+  "image": "laptop-gamer-5bdcd4f039150.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Portatil Gamer",
+  "price": 85200,
+  "discount": 10,
+  "category": "in-sale",
+  "description": "NOTEBOOK APPLE MACBOOK PRO M1 PRO 16GB 1TB 16 SILVER",
+  "image": "laptop-gamer-5bdcd4f039150.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Monitor Ultrawide 49\"",
+  "price": 279000,
+  "discount": 10,
+  "category": "visited",
+  "description": "MONITOR 49 SAMSUNG LED ODDYSSEY G95 CURVO DQHD 240HZ",
+  "image": "1667753214822.png"
+ },
+ {
+  "id": 9,
+  "name": "Computador Core i5 11va Generación",
+  "price": 150000,
+  "discount": 6,
+  "category": "in-sale",
+  "description": "PC INTEL GAMER KAIROS ULTIMATE I7 10700F 16GB SSD 240GB RTX 3070",
+  "image": "51Bl5TeSX8S._AC_SL1080_.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Portatil Gamer",
+  "price": 85200,
+  "discount": 10,
+  "category": "in-sale",
+  "description": "NOTEBOOK APPLE MACBOOK PRO M1 PRO 16GB 1TB 16 SILVER",
+  "image": "laptop-gamer-5bdcd4f039150.jpg"
  }
 ]
