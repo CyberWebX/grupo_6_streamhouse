@@ -25,9 +25,12 @@ router.get("/carrito", controladorProductos.carrito)
 router.get("/crear", controladorProductos.crear)
 router.post("/crear",uploadFile.single('newimage'), controladorProductos.almacenar)
 
-router.get("/detalle", controladorProductos.detalle)
+router.get("/:id", controladorProductos.detalle)
 
-router.get("/editar", controladorProductos.editar)
+router.get("/editar/:id", controladorProductos.editar)
+router.put("/editar/:id", uploadFile.single('newimage'), controladorProductos.editando)
+
+router.delete('/:id', controladorProductos.eliminar); 
 
 router.get("/", controladorProductos.listado)
 

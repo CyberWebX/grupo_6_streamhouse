@@ -3,6 +3,7 @@
 
    <head>
 
+        <link rel="stylesheet" href="/css/products-detalle.css">
          <%- include('../partials/head'); %>
     
    </head>
@@ -15,35 +16,70 @@
               
         </header>
 
-        <main>
+        <main id="maindetalle">
 
-            <div id="divProductsPrincipal"  >
+            <section class="sectionproducto">
 
-                <div class="col-sm-12 col-md-6 ">
-         
-                        <img id="imgprincipal" src="../images/productos/microfono-gaming-5d5ec2fd0b665.jpg" > 
-                 
+                <div class="containerimagen">
+                    <img class="imagenproducto" src="../images\productos\<%= producto.image %>" alt="">
                 </div>
-                <div class="col-sm-12 col-md-6 templatemo_col12">
-                    <span>Microfono Condensador Microsoft</span>
-                    <span>50 $US</span>
+                <div class="containersubsection">
+                    <div class="containerdescripcion">
+                        <h3 class="descripcionproducto"> <%= producto.description %> </h3>
+                    </div>
+                    <div>
+                        <article class="articlestreamhouse"> 
+                            <div class="precioespecial">PRECIO STREAMHOUSE: $<%= ( ( (100-producto.discount) * producto.price ) / 100  ) %></div>
+                            <div class="descuentoespecial">DESCUENTO <%= producto.discount %>% </div>
+                        </article>
+                        <article class="articlempago"> PAGA CON MERCADO PAGO </article>
+                        <article class="articlepreciolista"> 
+                            <div>PRECIO DE LISTA: $<%= producto.price %></div>
+                            <div> PAGA EN HASTA 12 CUOTAS SIN INTERES</div>
+                        </article>
+                        <div class="containerbotoncomprar">
+                            <button type="submit" name="comprar" class="botoncomprar"> AÑADIR AL CARRITO </button>
+                        </div>
+                        
+                        <div class="containermodificadores">    
+                            
+                            <a class="abotoneditar" href="/products/editar/<%= producto.id %>"><button type="submit" name="editar" class="botoneditar"> EDITAR </button></a>
+                            
+                            <form class="formbottonborrar" action="/products/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                                <button type="submit" class="botonborrar">ELIMINAR</button>
+                            </form>
+                            
+                        </div>
 
+                    </div>
                 </div>
-        
-        
-        </div>
-        
-             <!--imagen  Principal  del producto end-->
-        <div class="clear"></div>
-        
+                <div class="containerespecificaciones"> 
+                    <h4 class="tituloespecificaciones"> ESPECIFICACIONES</h4>
+                    <span class="especificaciones"> 
+                        MONITOR
+                        <br>
+                        <br>
+                        Tamaño de pantalla (clase): 49
+                        <br>
+                        Plano / Curvo: Curvo
+                        <br>
+                        Curvatura: 1000R
+                        <br>
+                        Relación de aspecto: 32:9
+                        <br>
+                        Brillo máximo (típico): 1000cd/m2 cd/㎡
+                        <br>
+                        Resolución: 5.120 x 1.440
+                    </span>
+                </div>
 
-
+            </section>
 
         </main>
 
         <footer>
 
-            <%- include('../partials/footer2'); %>
+            <%- include('../partials/footer'); %>
             
         </footer>
 
