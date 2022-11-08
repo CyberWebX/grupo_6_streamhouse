@@ -1,99 +1,103 @@
+
+
 <!DOCTYPE html>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/users-perfil.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <%- include('../partials/head'); %>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/users-perfil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <%- include('../partials/head'); %>
+</head>
 
-    <body class="perfil-body">
+<body class="perfil-body">
 
-        <header>
+    <header>
 
-            <%- include('../partials/header'); %>
+        <%- include('../partials/header'); %>
 
-        </header>
+    </header>
 
-        <main class= "main-perfil">
+    <main class= "main-perfil">
 
-            <div id="caja-principal">
-                <div class="barra-cuenta">
-                    <div class="micuenta">
-                        <i class="bi bi-person-circle micuenta-icon"></i>  MI CUENTA
-                    </div>
-                    <div class="info-cuenta">
-                        <i class="bi bi-info-circle info-cuenta-icon"></i>  INFORMACION DE MI CUENTA
-                    </div>
+        <div id="caja-principal">
+            <div class="barra-cuenta">
+                <div class="micuenta">
+                    <i class="bi bi-person-circle micuenta-icon"></i>  MI CUENTA
                 </div>
-                <div class="caja-datos">
-                    <div class="micuenta-caja">
-                        <br>
-                        <strong><i class="bi bi-person-rolodex personal-data-icon"></i>  Mis datos personales</strong>
-                        <br>
-                        <strong><i class="bi bi-lock-fill contraseña-icon"></i>  Modificar mi contraseña</strong>
-                        <br>
-                        <strong><i class="bi bi-cart-fill pedidos-icon"></i>  Mis pedidos</strong>
-                        <br>
-                        <strong><i class="bi bi-door-open-fill salir-icon"></i>  Salir</strong>
-                    </div>
-                    <div class="formulario">
-                        <form action="" method="POST">
-                            <br>
-                            Nombre
-                            <br>
-                            <input type="text" name="usuario" placeholder="Nombre" id="nombre"/>
-                            <br>
-                            Apellido
-                            <br>
-                            <input type="text" name="usuario" placeholder="Apellido" id="apellido"/>
-                            <br>
-                            Teléfono
-                            <br>
-                            <input type="tel" placeholder="telefono"  name="telefono" id="telefono" />
-                            <br>
-                            E-mail
-                            <br>
-                            <input type="email" placeholder="E-mail"  name="email" required id="email"/>
-                            <br>
-                            Edad
-                            <br>
-                            <input type="number" placeholder="Edad"  name="edad" id="edad" />
-                            <br>
-                            <input type="date" min="2021-01-01" max="2021-05-01" name="fecha" id="calendario"/>
-                            <br>
-                            País
-                            <br>
-                            <input type="text" name="usuario" placeholder="País" id="pais"/>
-                            <br>
-                            Ciudad
-                            <br>
-                            <input type="text" name="usuario" placeholder="Ciudad" id="ciudad"/>
-                            <br>
-                            <br>
-                            <button id="confirmar-btn" type="reset" class="btn btn-success"> Confirmar </button>
-                            <button id="cancelar-btn" type="submit" class="btn btn-success"> Cancelar </button> 
-                        </form>
-                    </div>
-                </div>
-                <div>
-                    <div class="logo-inferior">
-                    </div>
-                    <div class="info-inferior"></div>
+                <div class="info-cuenta">
+                    <i class="bi bi-info-circle info-cuenta-icon"></i>  INFORMACION DE MI CUENTA
                 </div>
             </div>
+            <div class="caja-datos">
+                <div class="micuenta-caja">
+                    <br>
+                    <strong><i class="bi bi-person-rolodex personal-data-icon"></i>  Mis datos personales</strong>
+                    <br>
+                    <strong><i class="bi bi-lock-fill contraseña-icon"></i>  Modificar mi contraseña</strong>
+                    <br>
+                    <strong><i class="bi bi-cart-fill pedidos-icon"></i>  Mis pedidos</strong>
+                    <br>
+                    <strong><i class="bi bi-door-open-fill salir-icon"></i>  Salir</strong>
+                </div>
+                <div class="formulario">
+                    <form action="" method="POST">
+                        <br>
+                        Nombre
+                        <br>
+                        <input type="text" name="usuario" placeholder="Nombre" id="nombre"/>
+                        <br>
+                        Apellido
+                        <br>
+                        <input type="text" name="usuario" placeholder="Apellido" id="apellido"/>
+                        <br>
+                        Teléfono
+                        <br>
+                        <input type="tel" placeholder="Teléfono"  name="telefono" id="telefono" />
+                        <br>
+                        E-mail
+                        <br>
+                        <input type="email" placeholder="E-mail"  name="email" required id="email"/>
+                        <br>
+                        Edad
+                        <br>
+                        <input type="number" placeholder="Edad"  name="edad" id="edad" />
+                        <br>
+                        <input type="date" min="2021-01-01" max="2021-05-01" name="fecha" id="calendario"/>
+                        <br>
+                        País
+                        <br>
+                        <input type="text" name="usuario" placeholder="País" id="pais"/>
+                        <br>
+                        Ciudad
+                        <br>
+                        <input type="text" name="usuario" placeholder="Ciudad" id="ciudad"/>
+                        <br>
+                        <br>
+                        <div class="botones">
+                            <button id="confirmar-btn" type="reset" class="btn btn-success"> Confirmar </button>
+                            <button id="cancelar-btn" type="submit" class="btn btn-success"> Cancelar </button> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div class="logo-inferior">
+                </div>
+                <div class="info-inferior"></div>
+            </div>
+        </div>
 
-        </main>
+    </main>
 
-        <footer>
-            
-            <%- include('../partials/footer'); %>
+    <footer>
+        
+        <%- include('../partials/footer'); %>
 
-        </footer>
+    </footer>
 
-    </body>
+</body>
 
 </html>
