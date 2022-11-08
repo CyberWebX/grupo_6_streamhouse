@@ -19,12 +19,13 @@
             <%- include('../partials/header'); %>
             
         </header>
-
+        <h2> Formulario de Login </h2>
         <div class= "main-login-registro">
-
-            <form class="form-registro" method="POST" action="/login">
+            
+            <form class="form-registro" method="POST" action="/users/login">
                 <h4>Login</h4>    
                 <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico">
+               
                 <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña">
                 <div class="cont-botón">
                     <input class="botón" type="submit" value="Iniciar Sesión">

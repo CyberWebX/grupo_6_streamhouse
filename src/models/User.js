@@ -1,14 +1,18 @@
 const express = require ('express');
 const router = express.Router();
 const bcryptjs = require('bcryptjs');
-
+const path = require('path');
 const fs = require('fs');
-
+//let namefile = path.join(__dirname,'../database/user.json')
+//const usuarios = JSON.parse(fs.readFileSync(namefile,'utf-8'));
 
 const User = {
-    fileName:'../database/user.json',
+
+   fileName:path.join(__dirname,'../database/user.json'),
     getData: function () {
+        
         return JSON.parse(fs.readFileSync(this.fileName,'utf-8'));
+        
     },
     generateId: function () {
         let allUsers = this.findAll();
@@ -22,6 +26,7 @@ const User = {
         
     },
     findAll: function() {
+        
         return this.getData();
     },
     findByPk: function (id) {
@@ -34,17 +39,35 @@ const User = {
         let userFound = allUsers.find(oneUser => oneUser[field] === text);
         return userFound
     },
-
+    findByFieldLogic: function (field,text) {
+        console.log("entre al metodo")
+        let allUsers = this.findAll();
+        let userFound = [];
+        userFound = allUsers.find(oneUser => oneUser[field] === text);
+        if (userFound){
+           
+           
+            return true;
+            
+        }else{
+            
+            return false;
+        }
+    },
 
     create: function(userData){
+        
         let allUsers = this.findAll();
+        delete userData.password2;
         let newUser  = {
             id: this.generateId(),
             ...userData,
             password: bcryptjs.hashSync(userData.password,10)
         }
         allUsers.push(newUser);
+        
         fs.writeFileSync(this.fileName,JSON.stringify(allUsers,null, ' '));
+        
         return newUser;
 
     },

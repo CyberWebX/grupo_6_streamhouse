@@ -19,13 +19,14 @@
         <%- include('../partials/header'); %>
 
     </header>
-
+    
     <main class= "main-perfil">
 
         <div id="caja-principal">
             <div class="barra-cuenta">
                 <div class="micuenta">
-                    <i class="bi bi-person-circle micuenta-icon"></i>  MI CUENTA
+                    <img src = "../images/groups/<%=  user.avatar %>"  class="fotoPerfil"  alt="mi foto-perfil"><%= user.email %>  
+                       <!-- <i class="bi bi-person-circle micuenta-icon"></i>   -->
                 </div>
                 <div class="info-cuenta">
                     <i class="bi bi-info-circle info-cuenta-icon"></i>  INFORMACION DE MI CUENTA
@@ -47,21 +48,18 @@
                         <br>
                         Nombre
                         <br>
-                        <input type="text" name="usuario" placeholder="Nombre" id="nombre"/>
+                        <input type="text" name="nombres" placeholder= "Nombres" id="nombre" value = <%= user.nombres %>/>
                         <br>
                         Apellido
                         <br>
-                        <input type="text" name="usuario" placeholder="Apellido" id="apellido"/>
-                        <br>
-                        Teléfono
-                        <br>
-                        <input type="tel" placeholder="Teléfono"  name="telefono" id="telefono" />
+                        <input type="text" name="apellidos" placeholder="Apellido" id="apellido" value = <%= user.apellidos %>  />
                         <br>
                         E-mail
                         <br>
-                        <input type="email" placeholder="E-mail"  name="email" required id="email"/>
+                        <input type="email" placeholder="E-mail"  name="email" required id="email"  readonly value = <%= user.email %>  />
                         <br>
-                        Edad
+                        <!--   
+                        Edad 
                         <br>
                         <input type="number" placeholder="Edad"  name="edad" id="edad" />
                         <br>
@@ -74,7 +72,7 @@
                         Ciudad
                         <br>
                         <input type="text" name="usuario" placeholder="Ciudad" id="ciudad"/>
-                        <br>
+                        <br> -->
                         <br>
                         <div class="botones">
                             <button id="confirmar-btn" type="reset" class="btn btn-success"> Confirmar </button>

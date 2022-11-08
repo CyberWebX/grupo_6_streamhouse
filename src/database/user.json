@@ -1,10 +1,18 @@
 [
  {
   "id": 1,
-  "nombres": "mario",
+  "nombres": "mario ",
   "apellidos": "Rovira",
-  "email":"xrovmario@yahoo.es",
-  "password": "$2a$10$kQJM3niPDYrbtpz6Openhe9f5iy.Py8rv2pKdVonaPucmH1r5Ch9a",
-  "avatar": "default.png"
+  "email": "xrovmario@yahoo.es",
+  "password": "$2a$10$x8IHR/5IugWsxHgr/La0sOyOZT5UW8T7KWxQ0r1YHwbbhc6RSz7B6",
+  "avatar": "profile-1667881893239.png"
+ },
+ {
+  "id": 2,
+  "nombres": "Kevin",
+  "apellidos": "Rovira",
+  "email": "kevin@gmail.com",
+  "password": "$2a$10$UaSEVikdcFqd1EtCvZmSSOHH.T7H2O5UlJCoACpMkUskna6RVn0oO",
+  "avatar": "profile-1667882364899.png"
  }
 ]

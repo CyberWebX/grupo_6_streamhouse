@@ -4,10 +4,14 @@
 
 .micuenta-caja{
     display: none;
+    
 }
 
 .micuenta{
     display: none;
+}
+.fotoPerfil{
+   width: 10%;
 }
 
 .info-cuenta{

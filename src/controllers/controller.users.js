@@ -1,22 +1,36 @@
 const bcryptjs = require('bcryptjs');
 const {validationResult}= require('express-validator');
 const User = require ('../models/User');
-
+const path = require ('path');
 
 const controladorUsuarios = {
 
     login: function (req, res){
         console.log(req.session);
-        res.render("/login");
+        res.render("./users/login");
     },
     loginProcess: (req,res) => {
+        const  resultValidation = validationResult(req);
+        console.log(req.body);
+        if (resultValidation.errors.length >0) {
+            return res.render('../views/users/login', {
+                            //userRegisterForm
+                            
+                errors: resultValidation.mapped(),
+                    oldData: req.body
+            });
+        }
+
        let userToLogin = User.findByField('email',req.body.email);
        if (userToLogin){
             let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
             if(isOkThePassword) {
-                return res.send('ok puedes ingresar');
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                //res.send('Ok Puedes ingresar')
+                return res.redirect('./perfil');
             }
-            return res.render('userLoginForm',{
+            return res.render('./users/login',{
                 errors: {
                     email:{
                         msg: 'Las credenciales son invalidas'
@@ -24,7 +38,7 @@ const controladorUsuarios = {
                 }
             });
        }
-       return res.render('userLoginForm', {
+       return res.render('./users/login', {
             errors: {
                 email: {
                     msg:'No se encuentra este email en nuestra base de datos'
@@ -34,7 +48,11 @@ const controladorUsuarios = {
     },
 
     perfil: function (req, res){
-        res.render("./users/perfil");
+        
+       
+        res.render("./users/perfil" ,{
+            user: req.session.userLogged
+        });
     },
 
     registro: function (req, res){
@@ -53,8 +71,12 @@ const controladorUsuarios = {
                     oldData: req.body
             });
         }
-        console.log(req.body.email);
-        let userInDB = User.findByField('email',req.body.email);
+       
+        let emailTraido = req.body.email;
+      
+
+        let userInDB = User.findByField('email',emailTraido);
+        
         if (userInDB) {
             return res.render('./users/registro', {
                 errors:{
@@ -65,7 +87,7 @@ const controladorUsuarios = {
                 oldData: req.body
             });
         }
-
+       console.log(req.body);
         let userToCreate = {
             ...req.body,
             

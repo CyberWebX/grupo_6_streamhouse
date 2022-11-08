@@ -16,12 +16,12 @@ const path = require ("path");
 
 const uploadFile =require  ('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegisterMiddleware');
-
+const validationsLogin = require('../middlewares/validationsLogin');
 //Rutas
 
 router.get("/login", controladorUsuarios.login)
 //procesar el login
-router.post('/login', controladorUsuarios.loginProcess);
+router.post('/login',validationsLogin, controladorUsuarios.loginProcess);
 
 router.get("/perfil", controladorUsuarios.perfil)
 
