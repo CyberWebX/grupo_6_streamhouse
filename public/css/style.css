@@ -13,7 +13,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main-login-registro{
-    height: 65vh;
+   
+    width: 100vw;
     align-items: center;
     justify-items: center;
 }
@@ -28,7 +29,7 @@ h1,h2,h3,h4,h5,h6{
     border: 3px solid #2BE0A4;
     border-radius: 4px;
     background-color: black;
-    width: 20vw;
+    width: 30vw;
     padding: 2vw;
     margin: auto;
     margin-top: 2.5vw;

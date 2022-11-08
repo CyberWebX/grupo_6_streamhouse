@@ -1,20 +1,28 @@
-<<<<<<< HEAD
 const bcryptjs = require('bcryptjs');
-const {validationresuilt}= require('express-validator');
+const {validationResult}= require('express-validator');
 const User = require ('../models/User');
-=======
-const {validationResult} = require('express-validator');
->>>>>>> 1e32ee3efb29d2776239b33100074e97697743d7
+
 
 const controladorUsuarios = {
 
     login: function (req, res){
-        res.render("./users/login");
+        console.log(req.session);
+        res.render("/login");
     },
     loginProcess: (req,res) => {
        let userToLogin = User.findByField('email',req.body.email);
        if (userToLogin){
-
+            let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
+            if(isOkThePassword) {
+                return res.send('ok puedes ingresar');
+            }
+            return res.render('userLoginForm',{
+                errors: {
+                    email:{
+                        msg: 'Las credenciales son invalidas'
+                    }
+                }
+            });
        }
        return res.render('userLoginForm', {
             errors: {
@@ -34,15 +42,21 @@ const controladorUsuarios = {
     },
     processRegister:(req,res) => {
         const  resultValidation = validationResult(req);
+       
+        //if (resultValidation.errors.length >0) {console.log(resultValidation.errors)}
+
         if (resultValidation.errors.length >0) {
-            return res.render('userRegisterForm', {
+            return res.render('../views/users/registro', {
+                            //userRegisterForm
+                            
                 errors: resultValidation.mapped(),
                     oldData: req.body
             });
         }
+        console.log(req.body.email);
         let userInDB = User.findByField('email',req.body.email);
         if (userInDB) {
-            return res.render('./views/users/registro', {
+            return res.render('./users/registro', {
                 errors:{
                     email:{
                         msg:'Este email ya se encuentra registrado'
@@ -54,7 +68,7 @@ const controladorUsuarios = {
 
         let userToCreate = {
             ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10),
+            
             avatar:req.file.filename
         }
 

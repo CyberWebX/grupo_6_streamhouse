@@ -1,0 +1,20 @@
+<h2> Formulario de Login </h2>
+<form method="POST" action="/users/login">
+    <div clss="row">
+        <div class="col-md-6 my-2">
+            <div class="form-group" >
+                <label > <b> Correo Electrónico</b></label>
+                <input type="text" name="email" class="form-control">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %> 
+                    </div>
+                <% } %>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
