@@ -35,12 +35,99 @@ const controladorProductos = {
     },
 
     detalle: function (req, res){
-        res.render("./products/detalle");
-    },
+		let idProducto = req.params.id;
+        let productoBuscado=null;
+
+		for (let o of products){
+			if (o.id==idProducto){
+				productoBuscado=o;
+				break;
+			}
+		}
+
+		if (productoBuscado!=null){
+			res.render('./products/detalle',{producto: productoBuscado});
+		}
+
+		res.send("Producto no encontrado");
+	
+
+	},
 
     editar: function (req, res){
-        res.render("./products/editar");
+
+        let idProducto = req.params.id;
+    
+        let productoBuscado=null;
+    
+        for (let o of products){
+            if (o.id==idProducto){
+                productoBuscado=o;
+                break;
+            }
+        }
+    
+        if (productoBuscado!=null){
+            res.render('./products/editar',{producto: productoBuscado});
+        }
+    
+        res.send("Producto no encontrado");
     },
+
+    editando: function (req,res){
+
+		let idProducto = req.params.id;
+
+		let datosProducto = req.body;
+
+		let nombreImagenAntigua="";
+
+		for (let o of products){
+			if (o.id==idProducto){
+
+				nombreImagenAntigua = o.image;
+
+				o.name = datosProducto.name;
+				o.price = parseInt(datosProducto.price);
+				o.discount = parseInt(datosProducto.discount);
+				o.category = datosProducto.category;
+				o.description = datosProducto.description;
+				o.image = req.file.filename;
+				break;
+			}
+		}
+
+		fs.writeFileSync(productsFilePath,JSON.stringify(products, null, " "),'utf-8');
+
+		fs.unlinkSync(__dirname+'/../../public/images/productos/'+nombreImagenAntigua);
+
+		res.redirect('/');
+		
+	},
+
+    eliminar : (req, res) => {
+
+		let idProductoX = req.params.id;
+
+		let nombreImagenAntigua="";
+
+		for (let o of products){
+			if (o.id==idProductoX){
+				nombreImagenAntigua = o.image;
+			}
+		}
+		
+		let NuevaListaProductos = products.filter(function(e){
+			return e.id!=idProductoX;
+		});
+
+		fs.writeFileSync(productsFilePath,JSON.stringify(NuevaListaProductos, null, " "),'utf-8');
+
+		fs.unlinkSync(__dirname+'/../../public/images/productos/'+nombreImagenAntigua);
+
+		res.redirect('/');
+
+	},
 
     listado: function (req, res){
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))

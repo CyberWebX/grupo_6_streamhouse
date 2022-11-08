@@ -5,7 +5,7 @@
     <head>
         <%- include('../partials/head'); %>
         <!-- Crear -->
-        <link rel="stylesheet" href="../css/crear.css">
+        <link rel="stylesheet" href="/css/crear.css">
     </head>
     
     <body >
@@ -20,20 +20,40 @@
 
             <div class= "divCrear">
 
-                <form class="formCrear" action="resultado.html" method="POST">
+                <form class="formCrear" action="/products/editar/<%=producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    
                     <h4>Editar producto</h4>
-                    <input class="casilla" type="text" name="nombres" id="nombres" placeholder="Nombre del producto:">    
-                    <input class="casilla" type="text" name="apellidos" id="apellidos" placeholder="Precio:">
-                    <input class="casilla" type="number" name="number" id="number" placeholder="Descuento:">
-                    <select class="casilla" type="text" name="text" id="text" placeholder="Categoría:">
-                        <option value="">Elegí</option>
-                        <option value="in-sale">En oferta</option>
-                        <option value="visited">Ultimos agregados</option>
+                    
+                    <input class="casilla" type="text" name="name" id="name" value="<%=producto.name%>" placeholder="Nombre del producto:">    
+                    
+                    <input class="casilla" type="text" name="price" id="price" value="<%=producto.price%>" placeholder="Precio:">
+                    
+                    <input class="casilla" type="text" name="discount" id="discount" value="<%=producto.discount%>" placeholder="Descuento:">
+                    
+                    <select class="casilla" name="category" id="category" placeholder="Categoría:">
+                        <% if (producto.category=="in-sale") {%>
+                            <option value="">Elegí</option>
+                            <option value="in-sale" selected>En oferta</option>
+                            <option value="visited" >Últimos agregados</option>
+                        <% } %>
+                        <% if (producto.category=="visited") {%>
+                            <option value="">Elegí</option>
+                            <option value="in-sale">En oferta</option>
+                            <option value="visited" selected>Últimos agregados</option>
+                        <% } %>{
                     </select>
-                    <input class="casilla" type="text" name="text" id="text" placeholder="Descripción:">
-                    <input type="file" name="image" id="image">
+                    
+                    <input class="casilla" type="text" name="description" id="description" value="<%=producto.description%>" placeholder="Descripción:">
+                    
+                    <div>
+						<label for="newimage" class="form-label">Cargar Imagen</label>
+						<input type="file" name="newimage" id="image"></input>
+					</div>
+                    
                     <br>
+                    
                     <button class="casilla" type="submit">Editar</button>
+                
                 </form>
                 
             </div>

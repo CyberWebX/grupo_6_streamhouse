@@ -7,7 +7,7 @@ const controladorUsuarios = {
 
     login: function (req, res){
         console.log(req.session);
-        res.render("/login");
+        res.render("./users/login");
     },
     loginProcess: (req,res) => {
        let userToLogin = User.findByField('email',req.body.email);
