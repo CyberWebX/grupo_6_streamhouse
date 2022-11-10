@@ -23,7 +23,7 @@ router.get("/login", controladorUsuarios.login)
 //procesar el login
 router.post('/login',validationsLogin, controladorUsuarios.loginProcess);
 
-router.get("/perfil", controladorUsuarios.perfil)
+router.get("/perfil", controladorUsuarios.perfil);
 
 // formulario de registro
 router.get("/registro", controladorUsuarios.registro);

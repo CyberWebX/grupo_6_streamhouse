@@ -48,8 +48,6 @@ const controladorUsuarios = {
     },
 
     perfil: function (req, res){
-        
-       
         res.render("./users/perfil" ,{
             user: req.session.userLogged
         });
