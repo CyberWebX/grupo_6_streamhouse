@@ -17,13 +17,6 @@
  },
  {
   "id": 3,
-<<<<<<< HEAD
-  "nombres": "czxczxc",
-  "apellidos": "zxczxczx",
-  "email": "zxczxc@gmail.com",
-  "password": "$2a$10$X6zxzCrPJMNn.x7o1R3cGe/wIavnqUBeTDcwQgZIbW0gL0yxnn1Eu",
-  "avatar": "profile-1668044601714.png"
-=======
   "nombres": "yinette",
   "apellidos": "iglesias f",
   "email": "yine@gmail.com",
@@ -37,6 +30,5 @@
   "email": "ariel@gmail.com",
   "password": "$2a$10$bJzWIk1pB.SOZhzvqzKR5ugO5Qapx9QjM5HjJ1PlFHocMDSWKAZ5q",
   "avatar": "profile-1668044110628.jpg"
->>>>>>> c204f7f7510a6a0542a29d251aa820510da3d6b3
  }
 ]
