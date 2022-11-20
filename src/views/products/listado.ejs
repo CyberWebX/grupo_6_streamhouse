@@ -28,18 +28,18 @@
                 <h3 class="titulolistado"> Productos destacados </h3>
                 
                 <div class="divorden">
-                    <% for(let p of productos) { %>
+                    <% for(let p of AllProductos) { %>
                         <a href="/products/<%= p.id %>">
                             <div class="divcontainerarticle">
                                 <article class="articlelistado">
                                     <img class="imglistado"  src="./images\productos\<%= p.image %>" alt="">
-                                    <h4 class="nombreproducto"> <%= p.name %> </h4>
+                                    <h4 class="nombreproducto"> <%= p.nombre %> </h4>
                                     <div>
                                         <div class="containerdetalle">
-                                            <div class="detalleproducto"> $<%= p.price %> </div>
-                                            <div class="detalleproducto"> <%= p.discount %> % </div>
+                                            <div class="detalleproducto"> $<%= p.precio %> </div>
+                                            <div class="detalleproducto"> <%= p.color %> ** </div>
                                         </div>
-                                        <div class="descripcionproducto"> <%= p.description %> </div>
+                                        <div class="descripcionproducto"> <%= p.categoria %> </div>
                                     </div>
                                 </article>
                             </div>

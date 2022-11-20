@@ -1,8 +1,11 @@
+const { decodeBase64 } = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const db = require('../database/models');
 
 const controladorProductos = {
 
@@ -129,10 +132,39 @@ const controladorProductos = {
 
 	},
 
-    listado: function (req, res){
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
-        res.render("./products/listado", {productos: products});
-    },
+    // listado: function (req, res){
+    //     const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
+    //     res.render("./products/listado", {productos: products});
+    // },
+
+
+	listado: (req, res) => {
+
+		db.producto.findAll({include: [
+			{association: 'categoria'},
+			{association: 'color'},
+			{association: 'usuario'},
+			{association: 'Detalle_venta'}]}).then((productos) => {
+
+				let listaProductos = [];
+
+				for(producto of productos){
+
+					let objProducto = {
+						nombre: producto.nombre,
+						categoria: producto.categoria.nombre,
+						color: producto.color.nombre,
+						precio: producto.precio
+					}
+
+					listaProductos.push(objProducto);
+				}
+				res.render("./products/listado", {AllProductos: listaProductos});
+			});
+	}
+
+
+
 
 }
 
