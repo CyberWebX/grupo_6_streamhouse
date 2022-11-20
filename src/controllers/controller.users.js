@@ -7,11 +7,12 @@ const controladorUsuarios = {
 
     login: function (req, res){
         console.log(req.session);
+       
         res.render("./users/login");
     },
     loginProcess: (req,res) => {
         const  resultValidation = validationResult(req);
-        console.log(req.body);
+        
         if (resultValidation.errors.length >0) {
             return res.render('../views/users/login', {
                             //userRegisterForm
@@ -85,7 +86,7 @@ const controladorUsuarios = {
                 oldData: req.body
             });
         }
-       console.log(req.body);
+       
         let userToCreate = {
             ...req.body,
             
