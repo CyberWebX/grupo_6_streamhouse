@@ -7,6 +7,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controladorMain = {
 
     home: function (req, res){
+        
+        
+        
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
         res.render("./main/home", {productos:products});
     },
