@@ -1,4 +1,4 @@
-function categoriaData(sequelize, Datatypes){
+ module.exports = (sequelize, Datatypes)=> {
     
     alias = 'categoria';
     
@@ -13,7 +13,7 @@ function categoriaData(sequelize, Datatypes){
     
     categoria.associate = function(modelos){
         
-        categoria.hasMany(modelos.Producto, {
+        categoria.hasMany(modelos.producto, {
             as: "productos",
             foreignKey: "Categoria_id"
         });
@@ -21,4 +21,3 @@ function categoriaData(sequelize, Datatypes){
     return categoria;
 }
 
-module.exports = categoriaData;

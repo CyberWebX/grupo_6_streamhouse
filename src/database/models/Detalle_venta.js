@@ -1,4 +1,4 @@
-function detalle_ventaData(sequelize, Datatypes){
+module.exports = (sequelize, Datatypes)=> {
 
     alias = 'detalle_venta';
 
@@ -16,16 +16,15 @@ function detalle_ventaData(sequelize, Datatypes){
 
     detalle_venta.associate = function(modelos){
 
-        detalle_venta.belongsTo(modelos.Venta, {
+        detalle_venta.belongsTo(modelos.venta, {
             as: "venta",
             foreignKey: "Venta_id"
         });
 
-        detalle_venta.belongsTo(modelos.Producto, {
+        detalle_venta.belongsTo(modelos.producto, {
             as: "producto",
             foreignKey: "Producto_id"
         });
     }
     return detalle_venta;
 }
-module.exports = detalle_ventaData;

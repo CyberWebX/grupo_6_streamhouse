@@ -1,4 +1,4 @@
-function productoData(sequelize, Datatypes){
+module.exports = (sequelize, Datatypes)=> {
 
     alias = 'producto';
 
@@ -22,26 +22,25 @@ function productoData(sequelize, Datatypes){
 
     producto.associate = function(modelos){
 
-        producto.belongsTo(modelos.Categoria, {
+        producto.belongsTo(modelos.categoria, {
             as: "categoria",
             foreignKey: "Categoria_id"
         });
 
-        producto.belongsTo(modelos.Color, {
+        producto.belongsTo(modelos.color, {
             as: "color",
             foreignKey: "Color_id"
         });
 
-        producto.belongsTo(modelos.Usuario, {
+        producto.belongsTo(modelos.usuario, {
             as: "usuario",
             foreignKey: "Usuario_id"
         });
 
-        producto.hasMany(modelos.Detalle_venta, {
+        producto.hasMany(modelos.detalle_venta, {
             as: "Detalle_venta",
             foreignKey: "Producto_id"
         });
     }
     return producto;
 }
-module.exports = productoData;

@@ -1,4 +1,4 @@
-function localData(sequelize, Datatypes){
+module.exports = (sequelize, Datatypes)=> {
 
     alias = 'local';
 
@@ -13,11 +13,10 @@ function localData(sequelize, Datatypes){
 
     local.associate = function(modelos){
 
-        local.hasMany(modelos.Usuario, {
+        local.hasMany(modelos.usuario, {
             as:"usuario",
             foreignKey:"Local_id"
         });
     }
     return local;
 }
-module.exports = localData;

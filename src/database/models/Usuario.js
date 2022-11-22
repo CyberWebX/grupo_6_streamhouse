@@ -1,4 +1,4 @@
-function UsuarioData(sequelize, Datatypes){
+module.exports = (sequelize, Datatypes)=> {
 
     alias = 'usuario';
 
@@ -18,21 +18,20 @@ function UsuarioData(sequelize, Datatypes){
 
     usuario.associate = function(modelos){
 
-        usuario.belongsTo(modelos.Local, {
+        usuario.belongsTo(modelos.local, {
             as: "local",
             foreignKey: "Local_id"
         });
 
-        usuario.hasMany(modelos.Venta, {
+        usuario.hasMany(modelos.venta, {
             as: "Venta",
             foreignKey: "Usuario_id"
         });
 
-        usuario.hasMany(modelos.Producto, {
+        usuario.hasMany(modelos.producto, {
             as: "producto",
             foreignKey: "Usuario_id"
         });
     }
     return usuario;
 }
-module.exports = UsuarioData;

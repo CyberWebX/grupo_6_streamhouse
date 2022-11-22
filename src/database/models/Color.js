@@ -1,4 +1,4 @@
-function colorData(sequelize, Datatypes){
+module.exports = (sequelize, Datatypes)=> {
 
     alias = 'color';
 
@@ -13,11 +13,11 @@ function colorData(sequelize, Datatypes){
 
     color.associate = function(modelos){
 
-        color.hasMany(modelos.Producto, {
+        color.hasMany(modelos.producto, {
             as: "producto",
             foreignKey: "Color_id"
         });
     }
     return color;
 }
-module.exports = colorData;
+

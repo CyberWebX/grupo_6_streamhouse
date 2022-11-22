@@ -1,4 +1,4 @@
-function VentaData(sequelize, Datatypes){
+module.exports = (sequelize, Datatypes)=> {
     alias = 'venta';
     
     cols = {
@@ -16,12 +16,12 @@ function VentaData(sequelize, Datatypes){
 
     venta.associate = function(modelos){
 
-        venta.belongsTo(modelos.Usuario, {
+        venta.belongsTo(modelos.usuario, {
             as: "usuario",
             foreignKey: "Usuario_id"
         });
 
-        venta.hasMany(modelos.Detalle_venta, {
+        venta.hasMany(modelos.detalle_venta, {
             as: "Detalle_venta",
             foreignKey: "Venta_id"
         });
@@ -29,4 +29,4 @@ function VentaData(sequelize, Datatypes){
     return venta;
 }
 
-module.exports = VentaData;
+
