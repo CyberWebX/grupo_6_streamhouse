@@ -12,7 +12,7 @@ module.exports = (sequelize, Datatypes)=> {
         Local_id: {type: Datatypes.INTEGER}
     }
 
-    config = {camelCase: false, timestamps: false}; 
+    config = {tableName:'usuario',camelCase: false, timestamps: false}; 
 
     const usuario = sequelize.define(alias, cols, config)
 
@@ -20,17 +20,17 @@ module.exports = (sequelize, Datatypes)=> {
 
         usuario.belongsTo(modelos.local, {
             as: "local",
-            foreignKey: "Local_id"
+            foreignKey: "local_id"
         });
 
         usuario.hasMany(modelos.venta, {
-            as: "Venta",
-            foreignKey: "Usuario_id"
+            as: "venta",
+            foreignKey: "usuario_id"
         });
 
         usuario.hasMany(modelos.producto, {
             as: "producto",
-            foreignKey: "Usuario_id"
+            foreignKey: "usuario_id"
         });
     }
     return usuario;

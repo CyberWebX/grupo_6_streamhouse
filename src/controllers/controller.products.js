@@ -144,11 +144,11 @@ const controladorProductos = {
 			{association: 'categoria'},
 			{association: 'color'},
 			{association: 'usuario'},
-			{association: 'Detalle_venta'}]}).then((productos) => {
+			{association: 'detalle_venta'}]}).then((productos) => {
 
 				let listaProductos = [];
 
-				for(producto of productos){
+				for(let producto of productos){
 
 					let objProducto = {
 						nombre: producto.nombre,

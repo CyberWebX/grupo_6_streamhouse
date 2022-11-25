@@ -7,7 +7,7 @@
         nombre: {type: Datatypes.STRING(45)}
     }
     
-    config = {camelCase: false, timestamps: false}; 
+    config = {tableName:'categoria',camelCase: false, timestamps: false}; 
     
     const categoria = sequelize.define(alias, cols, config)
     
@@ -15,7 +15,7 @@
         
         categoria.hasMany(modelos.producto, {
             as: "productos",
-            foreignKey: "Categoria_id"
+            foreignKey: "categoria_id"
         });
     }
     return categoria;

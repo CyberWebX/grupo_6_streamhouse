@@ -7,7 +7,7 @@ module.exports = (sequelize, Datatypes)=> {
         nombre: { type: Datatypes.STRING(45)}
     }
 
-    config = {camelCase: false, timestamps: false};  
+    config = {tableName:'color',camelCase: false, timestamps: false};  
 
     const color = sequelize.define(alias,cols,config)
 
@@ -15,7 +15,7 @@ module.exports = (sequelize, Datatypes)=> {
 
         color.hasMany(modelos.producto, {
             as: "producto",
-            foreignKey: "Color_id"
+            foreignKey: "color_id"
         });
     }
     return color;

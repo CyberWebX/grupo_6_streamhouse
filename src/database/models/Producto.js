@@ -11,12 +11,12 @@ module.exports = (sequelize, Datatypes)=> {
 
         // imagen
 
-        Categoria_id: {type: Datatypes.INTEGER},
-        Color_id: {type: Datatypes.INTEGER},
-        Usuario_id: {type: Datatypes.INTEGER}
+        categoria_id: {type: Datatypes.INTEGER},
+        color_id: {type: Datatypes.INTEGER},
+        usuario_id: {type: Datatypes.INTEGER}
     }
 
-    config = {camelCase: false, timestamps: false}; 
+    config = {tableName:'producto',camelCase: false, timestamps: false}; 
 
     const producto = sequelize.define(alias, cols, config)
 
@@ -24,22 +24,22 @@ module.exports = (sequelize, Datatypes)=> {
 
         producto.belongsTo(modelos.categoria, {
             as: "categoria",
-            foreignKey: "Categoria_id"
+            foreignKey: "categoria_id"
         });
 
         producto.belongsTo(modelos.color, {
             as: "color",
-            foreignKey: "Color_id"
+            foreignKey: "color_id"
         });
 
         producto.belongsTo(modelos.usuario, {
             as: "usuario",
-            foreignKey: "Usuario_id"
+            foreignKey: "usuario_id"
         });
 
         producto.hasMany(modelos.detalle_venta, {
-            as: "Detalle_venta",
-            foreignKey: "Producto_id"
+            as: "detalle_venta",
+            foreignKey: "producto_id"
         });
     }
     return producto;

@@ -14,5 +14,13 @@
   "email": "kevin@gmail.com",
   "password": "$2a$10$UaSEVikdcFqd1EtCvZmSSOHH.T7H2O5UlJCoACpMkUskna6RVn0oO",
   "avatar": "profile-1667882364899.png"
+ },
+ {
+  "id": 3,
+  "nombres": "YINE",
+  "apellidos": "IGLESIAS",
+  "email": "yine@gmail.com",
+  "password": "$2a$10$kYpUey00V37qQqsqsp3icOPvQxUxSv7nogZX/0Rcs0saG/rM9R7gS",
+  "avatar": "profile-1669171925441.png"
  }
 ]

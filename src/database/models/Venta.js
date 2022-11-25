@@ -7,10 +7,10 @@ module.exports = (sequelize, Datatypes)=> {
         monto_total: {type: Datatypes.FLOAT},
         domicilio_destino: {type: Datatypes.STRING(45)},
         ciudad_destino: {type: Datatypes.STRING(45)},
-        Usuario_id: {type: Datatypes.INTEGER}
+        usuario_id: {type: Datatypes.INTEGER}
     }
 
-    config = {camelCase: false, timestamps: false};
+    config = {tableName:'venta',camelCase: false, timestamps: false};
 
     const venta = sequelize.define(alias, cols, config)
 
@@ -18,12 +18,12 @@ module.exports = (sequelize, Datatypes)=> {
 
         venta.belongsTo(modelos.usuario, {
             as: "usuario",
-            foreignKey: "Usuario_id"
+            foreignKey: "usuario_id"
         });
 
         venta.hasMany(modelos.detalle_venta, {
-            as: "Detalle_venta",
-            foreignKey: "Venta_id"
+            as: "detalle_venta",
+            foreignKey: "venta_id"
         });
     }
     return venta;

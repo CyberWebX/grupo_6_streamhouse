@@ -7,7 +7,7 @@ module.exports = (sequelize, Datatypes)=> {
         nombre: {type: Datatypes.STRING(45)}
     }
 
-    config = {camelCase: false, timestamps: false}; 
+    config = {tableName:'local',camelCase: false, timestamps: false}; 
 
     const local = sequelize.define(alias, cols, config)
 
@@ -15,7 +15,7 @@ module.exports = (sequelize, Datatypes)=> {
 
         local.hasMany(modelos.usuario, {
             as:"usuario",
-            foreignKey:"Local_id"
+            foreignKey:"local_id"
         });
     }
     return local;
