@@ -64,6 +64,7 @@ const controladorUsuarios = {
 
         if (resultValidation.errors.length >0) {
             return res.render('../views/users/registro', {
+                
                             //userRegisterForm
                             
                 errors: resultValidation.mapped(),

@@ -3,10 +3,40 @@ const router = express.Router();
 const bcryptjs = require('bcryptjs');
 const path = require('path');
 const fs = require('fs');
-//let namefile = path.join(__dirname,'../database/user.json')
-//const usuarios = JSON.parse(fs.readFileSync(namefile,'utf-8'));
+
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('cyberweb_streamhouse','cyberweb_streamhouse6', 'DigitalHouse6?',
+{
+    host:'168.194.198.1',
+    dialect:'mysql'
+})
+
+//definimos el modelo
+const producto_modelo = sequelize.define('producto',{
+    "id":{type:Sequelize.INTEGER,primaryKey:true},
+    "nombre":Sequelize.STRING
+},{tableName:'producto',camelCase: false, timestamps: false})
+sequelize.authenticate()
+.then(()=> {
+    console.log("Conexion Monocuca")
+})
+.catch( error => {
+    console.log(('el error de conexion es' + error))
+})
+
+producto_modelo.findAll({atributos:['id','nombre']})
+.then(producto => 
+    {
+      const resultados = JSON.stringify(producto)  
+    console.log(resultados)
+})
+.catch( error => {
+    console.log("errores query" + error)  
+})
 
 const User = {
+    
+
 
    fileName:path.join(__dirname,'../database/user.json'),
     getData: function () {
