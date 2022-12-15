@@ -142,10 +142,9 @@ const controladorProductos = {
 
 		db.producto.findAll({include: [
 			{association: 'categoria'},
-			{association: 'color'},
-			{association: 'usuario'},
-			{association: 'detalle_venta'}]}).then((productos) => {
-
+			{association: 'color'},			
+			]}).then((productos) => {
+				
 				let listaProductos = [];
 
 				for(let producto of productos){

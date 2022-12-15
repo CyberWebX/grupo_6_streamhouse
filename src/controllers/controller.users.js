@@ -6,7 +6,7 @@ const path = require ('path');
 const controladorUsuarios = {
 
     login: function (req, res){
-        console.log(req.session);
+        //console.log(req.session);
        
         res.render("./users/login");
     },
@@ -22,6 +22,9 @@ const controladorUsuarios = {
             });
         }
 
+
+
+        
        let userToLogin = User.findByField('email',req.body.email);
        if (userToLogin){
             let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
