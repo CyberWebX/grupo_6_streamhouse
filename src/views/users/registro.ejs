@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
-       
+        <script src="/js/scriptLogin.js"></script>
         
         
     </head>
@@ -29,12 +29,24 @@
             <section class="form-registro">
                 <form action="/users/registro" method="POST" enctype="multipart/form-data"> 
                     <h4>Registro de Usuario</h4>
-                    <input class="casilla" type="text" name="nombres" id="nombres" placeholder="Nombres">    
-                    <input class="casilla" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
-                    <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico">
-                    <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña">
-                    <input class="casilla" type="password" name="password2" id="password2" placeholder="Repita contraseña">
-                    <input class="casilla" type="file" name="avatar">
+                    <input class="casilla" type="text" name="nombres" id="nombres" placeholder="Nombres" onblur="compruebaNombre(this)"> 
+                    <div id="errorNombre">Campo vacio</div>
+                    
+                    <input class="casilla" type="text" name="apellidos" id="apellidos" placeholder="Apellidos"  onblur="compruebaApellido(this)">
+                    <div id="errorApellido">Campo vacio</div>
+
+                    <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico" onblur="compruebaCorreo(this)">
+                    <div id="errorEmail">Campo vacio</div>
+
+                    <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña" onblur="compruebaClave(this)">
+                    <div id="errorClave"> Campo vacio</div>
+
+                    <input class="casilla" type="password" name="password2" id="password2" placeholder="Repita contraseña" onblur="compruebaRepClave(this)">
+                    <div id="errorRepClave"> Campo vacio</div>
+
+                    <input class="casilla" type="file" name="avatar" id="avatar" placeholder="Archivo" onblur="compruebaAvatar(this)">
+                    <div id="errorAvatar">  </div>
+
                     <div class="cont-botón">
                         <input class="botón" type="submit" value="Registrarme">
                     </div>

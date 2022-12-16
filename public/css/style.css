@@ -348,12 +348,45 @@ footer{
     width: 100%;
   }
 
+  #errorEmail{
+    display: none;
+    color: red;
+    font-family:Roboto;
+    font-weight: 400;
+  }
+  #errorClave{
+    display: none;
+    color: red;
+    font-family:Roboto;
+    font-weight: 400;
+  }
 
+  #errorRepClave{
+    display: none;
+    color: red;
+    font-family:Roboto;
+    font-weight: 400;
+  }
 
+  #errorNombre{
+    display: none;
+    color: red;
+    font-family:Roboto;
+    font-weight: 400;
+  }
+  #errorApellido{
+    display: none;
+    color: red;
+    font-family:Roboto;
+    font-weight: 400;
+  }
 
-
-
-
+  #errorAvatar{
+    display: none;
+    color: red;
+    font-family:Roboto;
+    font-weight: 400;
+  }
 
 
 

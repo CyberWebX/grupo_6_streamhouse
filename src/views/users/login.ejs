@@ -15,7 +15,7 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        
+         <script src="/js/scriptLogin.js"></script>
 
     </head>
 
@@ -31,15 +31,16 @@
             
             <form class="form-registro" method="POST" action="/users/login">
                 <h4>Login</h4>    
-                <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico">
-               
-                <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña">
+                <input class="casilla" type="email" name="email" id="email" placeholder="Correo electrónico" onblur="compruebaCorreo(this)">
+                <div id="errorEmail">Campo vacio</div>
+                <input class="casilla" type="password" name="password" id="password" placeholder="Contraseña"     onblur="compruebaClave(this)" >
+                <div id="errorClave"> Campo vacio</div>
                 <div class="cont-botón">
                     <input class="botón" type="submit" value="Iniciar Sesión">
                     
                     
 
-                    <a class="botón" href="/users/registro"><input type="buttom" value=""></a>
+                    <a  href="/users/registro"><input class="botón" type="buttom" value="Registro"></a>
                 </div>
             </form>
 
