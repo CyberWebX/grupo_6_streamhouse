@@ -72,8 +72,8 @@ function compruebaClave(field){
         errorClave.style.display="block";
         todoOk=false;
     }else {
-        if (field.value.length <9){
-            errores =  'Numero de caracteres menor a 8';
+        if (field.value.length <6){
+            errores =  'Numero de caracteres menor a 6';
             errorClave.innerHTML = errores;
             errorClave.style.display="block";
             todoOk=false;

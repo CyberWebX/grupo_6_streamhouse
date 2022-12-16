@@ -50,7 +50,8 @@ h1,h2,h3,h4,h5,h6{
 
 .cont-botón {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+   align-items: center;
     justify-content: space-around;
 }
 
@@ -59,7 +60,7 @@ h1,h2,h3,h4,h5,h6{
     justify-content: center;
     border: 2px solid #2BE0A4;
     background-color: white;
-    width: 40%;
+    width: 80%;
     padding: 0.7vw;
     border-radius: 4px;
     margin-bottom: 2vh;
