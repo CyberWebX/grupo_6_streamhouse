@@ -1,37 +1,54 @@
-module.exports = (sequelize, Datatypes)=> {
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'Usuarios';
+    let cols = {
+        id: {
+            type: dataTypes.INTEGER, 
+            primaryKey: true, 
+            autoIncrement: true
+        },
+        nombre: {
+            type: dataTypes.STRING(45)
+        },
+        apellido: {
+            type: dataTypes.STRING(45)
+        },
+        email: {
+            type: dataTypes.STRING(45)
+        },
+        clave: {
+            type: dataTypes.STRING(45)
+        },
+        admin: {
+            type: dataTypes.BOOLEAN
+        },
+        Local_id: {
+            type: dataTypes.INTEGER
+        }
+    };
+    let config = {
+        tableName:'Usuario', 
+        camelCase: false, 
+        timestamps: false
+    }; 
 
-    alias = 'usuario';
+    const Usuario = sequelize.define(alias, cols, config);
 
-    cols = {
-        id: {type: Datatypes.INTEGER , primaryKey: true, autoIncrement: true},
-        nombre: {type: Datatypes.STRING(45)},
-        apellido: {type: Datatypes.STRING(45)},
-        email: {type: Datatypes.STRING(45)},
-        clave: {type: Datatypes.STRING(45)},
-        admin: {type: Datatypes.BOOLEAN},
-        Local_id: {type: Datatypes.INTEGER}
-    }
+    Usuario.associate = function(modelos){
 
-    config = {tableName:'usuario',camelCase: false, timestamps: false}; 
-
-    const usuario = sequelize.define(alias, cols, config)
-
-    usuario.associate = function(modelos){
-
-        usuario.belongsTo(modelos.local, {
+        Usuario.belongsTo(modelos.local, {
             as: "local",
             foreignKey: "local_id"
         });
 
-        usuario.hasMany(modelos.venta, {
+        Usuario.hasMany(modelos.venta, {
             as: "venta",
             foreignKey: "usuario_id"
         });
 
-        usuario.hasMany(modelos.producto, {
+        Usuario.hasMany(modelos.producto, {
             as: "producto",
             foreignKey: "usuario_id"
         });
     }
-    return usuario;
+    return Usuario;
 }
