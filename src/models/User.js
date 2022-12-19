@@ -13,66 +13,12 @@ const sequelize = new Sequelize('cyberweb_streamhouse','cyberweb_streamhouse6', 
 var StreamUser;
 var vectUsuarioObjetos =[];
 
-//definimos el modelo
-const producto_modelo = sequelize.define('producto',{
-    "id":{type:Sequelize.INTEGER,primaryKey:true},
-    "nombre":Sequelize.STRING
-},{tableName:'producto',camelCase: false, timestamps: false})
-sequelize.authenticate()
-.then(()=> {
-    console.log("Conexion Monocuca")
-})
-.catch( error => {
-    console.log(('el error de conexion es' + error))
-})
-
-producto_modelo.findAll({atributos:['id','nombre']})
-.then(producto => 
-    {
-      const resultados = JSON.stringify(producto)  
-    //console.log(resultados)
-})
-.catch( error => {
-    console.log("errores query" + error)  
-})
-
-const user_modelo = sequelize.define('usuario',{
-    "id":{type:Sequelize.INTEGER,primaryKey:true},
-    "nombre":Sequelize.STRING,
-    "apellido":Sequelize.STRING,
-    "email":Sequelize.STRING,
-    "clave":Sequelize.STRING,
-    "avatar":Sequelize.STRING
-
-},{tableName:'usuario',camelCase: false, timestamps: false})
-sequelize.authenticate()
-.then(()=> {
-    //console.log("Conexion 3Monocuca")
-})
-.catch( error => {
-    console.log(('el error de conexion es' + error))
-})
-user_modelo.findAll({atributos:['id','nombre','apellido','email','clave','avatar']})
-.then(usuario => 
-    {
-      const resultados = JSON.stringify(usuario)  
-    //console.log(resultados);
-    
-   //console.log(usuario[0].id);
-   StreamUser = usuario;
-   //console.log(StreamUser);
-})
-.catch( error => {
-    //console.log("errores query" + error)  
-})
-//console.log("usuarios stream :");
- //console.log(StreamUser);
 
 const User = {
     
 
 
-   fileName:path.join(__dirname,'../database/user.json'),
+   //fileName:path.join(__dirname,'../database/user.json'),
     getData: function () {
         //console.log(JSON.parse(fs.readFileSync(this.fileName,'utf-8')));
         //return JSON.parse(fs.readFileSync(this.fileName,'utf-8'));
@@ -116,7 +62,7 @@ const User = {
             
 
            }
-           console.log(vectUsuarioObjetos);
+           //console.log(vectUsuarioObjetos);
            
            //console.log(StreamUser);
 
@@ -130,10 +76,12 @@ const User = {
         
     },
     generateId: function () {
-        let allUsers = this.findAll();
-        let lastUser = allUsers.pop();
+        let allUsers = this.getData();
+        
+        let n= allUserslength;
+        let lastUser = allUsers[n-1];
         if (lastUser) {
-            return lastUser.id +1;
+            return lastUser +1;
         
         }  else {
             return 1;
@@ -141,22 +89,79 @@ const User = {
         
     },
     findAll: function() {
-        //console.log("ff");
-        //console.log(this.getData());
+        console.log("ff");
+        console.log(this.getData());
         return this.getData();
     },
     findByPk: function (id) {
-        let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser => oneUser.id === id);
-        return userFound
-    },
-    findByField: function (field,text) {
-        let allUsers = this.findAll();
+        let allUsers = this.getData();
+        let userFound;
+        for (i=1;i<=allUsers.length;i++){
+            if (allUsers[i-1].id ==id) {
+                userFound = allUsers[i-1].id
+            } 
+        }
+       // let userFound = allUsers.find(oneUser => oneUser.id === id);
         
-        //console.log(allUsers);
-        let userFound = allUsers.find(oneUser => oneUser[field] === text);
-        return userFound
+        
+        return userFound ;
     },
+    findByField: function (email,text) {
+        let usuario_modelo = sequelize.define('usuario',{
+            "id":{type:Sequelize.INTEGER,primaryKey:true},
+            "nombre":Sequelize.STRING,
+            "apellido":Sequelize.STRING,
+            "email":Sequelize.STRING,
+            "clave":Sequelize.STRING,
+            "avatar":Sequelize.STRING
+        
+        },{tableName:'usuario',camelCase: false, timestamps: false})
+        sequelize.authenticate()
+        .then(()=> {
+            console.log("Conexion 3Monocuca")
+        })
+        .catch( error => {
+            console.log(('el error de conexion es' + error))
+        })
+        usuario_modelo.findAll({atributos:['id','nombre','apellido','email','clave','avatar']})
+        .then(usuario => 
+            {
+              const resultados = JSON.stringify(usuario)  
+            //console.log(resultados);
+            
+           //console.log(usuario[0].id);
+           let userFound=-1;
+           for (i=1;i<=usuario.length;i++){
+            
+                if (usuario[i-1].email ==text) {
+                    
+                    userFound = usuario[i-1].id;
+                    
+                    return userFound;
+                    
+                } 
+                
+            
+
+           }
+           
+           //console.log(vectUsuarioObjetos);
+           
+           //console.log(StreamUser);
+
+        })
+        .catch( error => {
+            console.log("errores query" + error)  
+        })
+        //console.log("vdafaf");
+        //console.log(vectUsuarioObjetos);
+         
+       
+       
+    },
+
+
+
     findByFieldLogic: function (field,text) {
         console.log("entre al metodo")
         let allUsers = this.findAll();

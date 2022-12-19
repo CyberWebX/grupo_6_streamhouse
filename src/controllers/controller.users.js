@@ -1,7 +1,9 @@
 const bcryptjs = require('bcryptjs');
 const {validationResult}= require('express-validator');
-const User = require ('../models/User');
+//const User = require ('../models/User');
 const path = require ('path');
+
+const db = require('../database/models');
 
 const controladorUsuarios = {
 
@@ -22,33 +24,65 @@ const controladorUsuarios = {
             });
         }
 
+        db.usuario.findAll().then((usuarios) => {
+            let userToLogin;
+            
+            for (p of usuarios){
+                
+				if (p.email == req.body.email ){
+                    
+                    userToLogin ={
+                        id:p.id,
+                        email:p.email,
+                        nombre:p.nombre,
+                        apellido:p.apellido,
+                        password:p.clave,
+                        avatar:p.avatar
+                        
+                        
 
+                    } ;
+                    
 
-        
-       let userToLogin = User.findByField('email',req.body.email);
-       if (userToLogin){
-            let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
-            if(isOkThePassword) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                //res.send('Ok Puedes ingresar')
-                return res.redirect('./perfil');
-            }
-            return res.render('./users/login',{
-                errors: {
-                    email:{
-                        msg: 'Las credenciales son invalidas'
-                    }
                 }
-            });
-       }
-       return res.render('./users/login', {
+			}
+
+            if (userToLogin){
+                let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
+                if(isOkThePassword) {
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+                    //res.send('Ok Puedes ingresar')
+                    return res.redirect('./perfil');
+                }
+                return res.render('./users/login',{
+                    errors: {
+                        email:{
+                            msg: 'Las credenciales son invalidas'
+                        }
+                    }
+                });
+           }
+           return res.render('./users/login', {
             errors: {
                 email: {
                     msg:'No se encuentra este email en nuestra base de datos'
                 }
             }
        });
+
+
+        })
+        .catch( error => {
+            console.log("errores query" + error)  
+        })
+
+
+        
+       
+       
+      
+       
     },
 
     perfil: function (req, res){

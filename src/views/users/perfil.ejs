@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/users-perfil.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    
+    <link rel="stylesheet" href="../css/users-perfil.css">
 </head>
 
 <body class="perfil-body">
@@ -27,7 +27,7 @@
 
         <div id="caja-principal">
             <div class="barra-cuenta">
-                <div class="micuenta">
+                <div class="micuenta"> 
                     <img src = "../images/groups/<%=  user.avatar %>"  class="fotoPerfil"  alt="mi foto-perfil"><%= user.email %>  
                        <!-- <i class="bi bi-person-circle micuenta-icon"></i>   -->
                     
@@ -52,11 +52,11 @@
                         <br>
                         Nombre
                         <br>
-                        <input type="text" name="nombres" placeholder= "Nombres" id="nombre" value = <%= user.nombres %>/>
+                        <input type="text" name="nombres" placeholder= "Nombres" id="nombre" value = <%= user.nombre %>/>
                         <br>
                         Apellido
                         <br>
-                        <input type="text" name="apellidos" placeholder="Apellido" id="apellido" value = <%= user.apellidos %>  />
+                        <input type="text" name="apellidos" placeholder="Apellido" id="apellido" value = <%= user.apellido %>  />
                         <br>
                         E-mail
                         <br>
@@ -79,8 +79,8 @@
                         <br> -->
                         <br>
                         <div class="botones">
-                            <button id="confirmar-btn" type="reset" class="btn btn-success"> Confirmar </button>
-                            <button id="cancelar-btn" type="submit" class="btn btn-success"> Cancelar </button> 
+                            <button id="confirmar-btn" type="reset" class="btn btn-success btnPerfil"> Confirmar </button>
+                            <button id="cancelar-btn" type="submit" class="btn btn-success btnPerfil"> Cancelar </button> 
                         </div>
                     </form>
                 </div>

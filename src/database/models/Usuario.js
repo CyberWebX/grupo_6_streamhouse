@@ -1,54 +1,38 @@
-module.exports = (sequelize, dataTypes) => {
-    let alias = 'Usuarios';
-    let cols = {
-        id: {
-            type: dataTypes.INTEGER, 
-            primaryKey: true, 
-            autoIncrement: true
-        },
-        nombre: {
-            type: dataTypes.STRING(45)
-        },
-        apellido: {
-            type: dataTypes.STRING(45)
-        },
-        email: {
-            type: dataTypes.STRING(45)
-        },
-        clave: {
-            type: dataTypes.STRING(45)
-        },
-        admin: {
-            type: dataTypes.BOOLEAN
-        },
-        Local_id: {
-            type: dataTypes.INTEGER
-        }
-    };
-    let config = {
-        tableName:'Usuario', 
-        camelCase: false, 
-        timestamps: false
-    }; 
+module.exports = (sequelize, Datatypes)=> {
 
-    const Usuario = sequelize.define(alias, cols, config);
+    alias = 'usuario';
 
-    Usuario.associate = function(modelos){
+    cols = {
+        id: {type: Datatypes.INTEGER , primaryKey: true, autoIncrement: true},
+        nombre: {type: Datatypes.STRING(45)},
+        apellido: {type: Datatypes.STRING(45)},
+        email: {type: Datatypes.STRING(45)},
+        clave: {type: Datatypes.STRING(45)},
+        avatar:{type: Datatypes.STRING(200)},
+        admin: {type: Datatypes.BOOLEAN},
+        Local_id: {type: Datatypes.INTEGER}
+    }
 
-        Usuario.belongsTo(modelos.local, {
+    config = {tableName:'usuario',camelCase: false, timestamps: false}; 
+
+    const usuario = sequelize.define(alias, cols, config)
+
+    usuario.associate = function(modelos){
+
+        usuario.belongsTo(modelos.local, {
             as: "local",
             foreignKey: "local_id"
         });
 
-        Usuario.hasMany(modelos.venta, {
+        usuario.hasMany(modelos.venta, {
             as: "venta",
             foreignKey: "usuario_id"
         });
 
-        Usuario.hasMany(modelos.producto, {
+        usuario.hasMany(modelos.producto, {
             as: "producto",
             foreignKey: "usuario_id"
         });
     }
-    return Usuario;
+    return usuario;
 }
