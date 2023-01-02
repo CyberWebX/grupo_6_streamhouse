@@ -13,6 +13,8 @@ const controladorUsuarios = {
         res.render("./users/login");
     },
     loginProcess: (req,res) => {
+        
+
         const  resultValidation = validationResult(req);
         
         if (resultValidation.errors.length >0) {
@@ -23,46 +25,48 @@ const controladorUsuarios = {
                     oldData: req.body
             });
         }
-
+        
         db.usuario.findAll().then((usuarios) => {
-            let userToLogin;
-            
-            for (p of usuarios){
-                
-				if (p.email == req.body.email ){
-                    
-                    userToLogin ={
-                        id:p.id,
-                        email:p.email,
-                        nombre:p.nombre,
-                        apellido:p.apellido,
-                        password:p.clave,
-                        avatar:p.avatar
+                        let userToLogin;
                         
-                        
+                        for (p of usuarios){
+                           
+                            if (p.email == req.body.email ){
+                                 
+                                userToLogin ={
+                                    id:p.id,
+                                    email:p.email,
+                                    nombre:p.nombre,
+                                    apellido:p.apellido,
+                                    password:p.clave,
+                                    avatar:p.avatar
+                                    
+                                    
 
-                    } ;
-                    
+                                } ;
+                                
 
-                }
-			}
-
-            if (userToLogin){
-                let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
-                if(isOkThePassword) {
-                    delete userToLogin.password;
-                    req.session.userLogged = userToLogin;
-                    //res.send('Ok Puedes ingresar')
-                    return res.redirect('./perfil');
-                }
-                return res.render('./users/login',{
-                    errors: {
-                        email:{
-                            msg: 'Las credenciales son invalidas'
+                            }
                         }
+                       
+                        if (userToLogin){
+                            let isOkThePassword = bcryptjs.compareSync(req.body.password,userToLogin.password);
+                          
+                            if(isOkThePassword) {
+                                
+                                delete userToLogin.password;
+                                req.session.userLogged = userToLogin;
+                                //res.send('Ok Puedes ingresar')
+                                return res.redirect('./perfil');
+                            }
+                            return res.render('./users/login',{
+                                errors: {
+                                    email:{
+                                        msg: 'Las credenciales son invalidas'
+                                    }
+                                }
+                            });
                     }
-                });
-           }
            return res.render('./users/login', {
             errors: {
                 email: {
@@ -95,44 +99,77 @@ const controladorUsuarios = {
         res.render("./users/registro");
     },
     processRegister:(req,res) => {
-        const  resultValidation = validationResult(req);
+        //const  resultValidation = validationResult(req);
        
         //if (resultValidation.errors.length >0) {console.log(resultValidation.errors)}
 
-        if (resultValidation.errors.length >0) {
-            return res.render('../views/users/registro', {
+        //if (resultValidation.errors.length >0) {
+           // return res.render('../views/users/registro', {
                 
-                            //userRegisterForm
                             
-                errors: resultValidation.mapped(),
-                    oldData: req.body
-            });
-        }
+                            
+                //errors: resultValidation.mapped(),
+                    //oldData: req.body
+           // });
+       // }
        
-        let emailTraido = req.body.email;
+        let n = 0;
       
+        db.usuario.findAll({where:{email:req.body.email}}).then((usuario) => {
+            let userInDB= usuario;
+            console.log(userInDB);
+           
 
-        let userInDB = User.findByField('email',emailTraido);
-        
-        if (userInDB) {
-            return res.render('./users/registro', {
-                errors:{
-                    email:{
-                        msg:'Este email ya se encuentra registrado'
-                    }
-                },
-                oldData: req.body
-            });
-        }
-       
-        let userToCreate = {
-            ...req.body,
+            if (userInDB.length  >0) {
+                console.log("entre al if")
+                return res.render('./users/registro', {
+                    errors:{
+                        email:{
+                            msg:'Este email ya se encuentra registrado'
+                        }
+                    },
+                    oldData: req.body
+                });
+            }
+          
             
-            avatar:req.file.filename
-        }
+            //let password = bcryptjs.hashSync(req.body.clave,10);
+            
+            
+             
+                // Store hash in your password DB.
+                db.usuario.create(
+                    { 
+                        
+                        nombre :req.body.nombre,
+                        apellido: req.body.apellido,
+                        email: req.body.email,
+                        avatar: req.file.filename,
+                        admin:0,
+                        clave: bcryptjs.hashSync(req.body.password,10),
+                        Local_id:2,
+                        estado:1
+                    })
+                    .then((resultados)  => { 
+                        res.redirect('/users/login');
+                     }) .catch (error => {
 
-        User.create(userToCreate);
-        return res.send('Ok las validadciones pasaron sin errores');
+                        console.log ("La promise no funciona" , error)
+                        
+                        })
+           
+           
+
+            
+
+
+
+        });
+
+
+        
+        
+        
         
     }
 
