@@ -48,15 +48,15 @@
                     <strong><i class="bi bi-door-open-fill salir-icon"></i>  Salir</strong>
                 </div>
                 <div class="formulario">
-                    <form action="" method="POST">
+                    <form action="/users/perfil?_method=PUT" method="POST">
                         <br>
                         Nombre
                         <br>
-                        <input type="text" name="nombres" placeholder= "Nombres" id="nombre" value = <%= user.nombre %> />
+                        <input type="text" name="nombre" placeholder= "Nombres" id="nombre" value = <%= user.nombre %> />
                         <br>
                         Apellido
                         <br>
-                        <input type="text" name="apellidos" placeholder="Apellido" id="apellido" value = <%= user.apellido %>  />
+                        <input type="text" name="apellido" placeholder="Apellido" id="apellido" value = <%= user.apellido %>  />
                         <br>
                         E-mail
                         <br>
@@ -76,11 +76,13 @@
                         Ciudad
                         <br>
                         <input type="text" name="usuario" placeholder="Ciudad" id="ciudad"/>
-                        <br> -->
+                        <br>    <input href="" class="botón" type="submit" value="Iniciar Sesión">   -->
                         <br>
                         <div class="botones">
-                            <button id="confirmar-btn" type="reset" class="btn btn-success btnPerfil"> Confirmar </button>
-                            <button id="cancelar-btn" type="submit" class="btn btn-success btnPerfil"> Cancelar </button> 
+                           <!--     <br>    <button id="confirmar-btn" type="submit" class="btn btn-success btnPerfil"> Confirmar </button>   -->
+                           <input href="" class="botón" type="submit" value="Confirmar">
+                            
+                            <button id="cancelar-btn" type="reset" class="btn btn-success btnPerfil"> Cancelar </button> 
                         </div>
                     </form>
                 </div>

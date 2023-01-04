@@ -25,6 +25,8 @@ router.post('/login',validationsLogin, controladorUsuarios.loginProcess);
 
 router.get("/perfil", controladorUsuarios.perfil);
 
+router.put("/perfil", controladorUsuarios.actualizar);
+
 // formulario de registro
 router.get("/registro", controladorUsuarios.registro);
 

@@ -90,9 +90,20 @@ const controladorUsuarios = {
     },
 
     perfil: function (req, res){
+       
         res.render("./users/perfil" ,{
             user: req.session.userLogged
         });
+    },
+    actualizar: function(req,res){
+        
+        db.usuario.update({nombre:req.body.nombre,apellido:req.body.apellido},{where: {email:req.body.email}})
+        .then(res.render("./users/perfil" ,{
+            user: req.session.userLogged
+        }))
+        .catch( error => {
+            console.log("errores query" + error)  
+        })
     },
 
     registro: function (req, res){
