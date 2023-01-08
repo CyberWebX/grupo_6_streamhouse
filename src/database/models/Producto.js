@@ -4,11 +4,13 @@ module.exports = (sequelize, Datatypes)=> {
 
     cols = {
         id: {type: Datatypes.INTEGER , primaryKey: true, autoIncrement: true},
-        nombre: {type: Datatypes.STRING(45)},
+        nombre: {type: Datatypes.STRING(100)},
         precio: {type: Datatypes.FLOAT},
         fecha_creacion: {type: Datatypes.DATE},
         fecha_baja: {type: Datatypes.DATE},
-
+        imagen: {type: Datatypes.STRING(10000)},
+        especificaciones:{type: Datatypes.STRING(200)},
+        descuento:{type: Datatypes.FLOAT},
         // imagen
 
         categoria_id: {type: Datatypes.INTEGER},

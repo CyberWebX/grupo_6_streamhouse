@@ -10,13 +10,25 @@ const rutasProducts         = require ("./src/routes/routes.products.js")
 const rutasUsers            = require ("./src/routes/routes.users.js")
 const rutasEnConstruccion   = require ("./src/routes/routes.enconstruccion.js")
 
+const {localStorage} = require("node-localstorage");
+const store = require("store2");
 
+//localStorage
+let carritoCompra = [];
+if (store("carritoCompra") ){
+    carritoCompra = store("carritoCompra");
 
+}
+
+// session
 app.use(session({
     secret: "Shh, Its a secret",
     resave:false,
     saveUninitialized:false,
 }));
+
+
+
 
 // ordernar CRUD // 
 

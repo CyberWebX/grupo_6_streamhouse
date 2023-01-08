@@ -97,6 +97,9 @@ const controladorUsuarios = {
     },
     actualizar: function(req,res){
         
+        req.session.userLogged.nombre = req.body.nombre;
+        req.session.userLogged.apellido = req.body.apellido;
+       
         db.usuario.update({nombre:req.body.nombre,apellido:req.body.apellido},{where: {email:req.body.email}})
         .then(res.render("./users/perfil" ,{
             user: req.session.userLogged

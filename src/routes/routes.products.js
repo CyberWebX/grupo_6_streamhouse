@@ -27,6 +27,8 @@ router.post("/crear",uploadFile.single('newimage'), controladorProductos.almacen
 
 router.get("/:id", controladorProductos.detalle)
 
+
+
 router.get("/editar/:id", controladorProductos.editar)
 router.put("/editar/:id", uploadFile.single('newimage'), controladorProductos.editando)
 

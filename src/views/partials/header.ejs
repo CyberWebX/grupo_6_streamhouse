@@ -63,13 +63,14 @@
     <div class="box-logo-carrito">
         <a href="/products" class="np">  Productos     </a>
         
-       
-            <a href="/users/login" class="g">   Login       </a>
-            
+            <% if (!locals.user) {   %>
+                <a href="/users/login" class="g">   Login       </a>
+            <%  }   %>
         
-          
-        <a href="/users/perfil" class="g">   Perfil       </a>
-        <a href="/products/carrito" class="c">   Carrito   </a>
+            <% if (locals.user) {   %>
+                <a href="/users/perfil" class="g">   Perfil       </a>
+                <a href="/products/carrito" class="c">   Carrito   </a>
+            <%  }   %>
         <a href="" class="c">   Contacto   </a>
         <a href="" class="c">   Ayuda  </a>
     </div>
@@ -80,8 +81,10 @@
     <a href="/products" class="productos-box2">  Productos     </a>
     <a href="" class="">   Ofertas       </a>
     <a href="" class="">   Lo mas nuevo       </a>
-    <a href="/products/crear" class=""> Crear Producto   </a>
-    <a href="/users/perfil" class="g">   Perfil       </a>
+    <% if (locals.user) {   %>
+        <a href="/products/crear" class=""> Crear Producto   </a>
+        <a href="/users/perfil" class="g">   Perfil       </a>
+        <%  }   %>
     <!-- <a href="" class="c">   Contacto   </a> -->
     <a href="" class="ayuda-box2">   Ayuda  </a>
 </div>

@@ -38,21 +38,49 @@ const controladorProductos = {
     },
 
     detalle: function (req, res){
-		let idProducto = req.params.id;
-        let productoBuscado=null;
+		
+		db.producto.findAll({include: [
+			{association: 'categoria'},
+			{association: 'color'},			
+			],
+		where: {id:req.params.id}}).then((productos) => {
+				
+				let listaProductos = [];
+				
 
-		for (let o of products){
-			if (o.id==idProducto){
-				productoBuscado=o;
-				break;
-			}
-		}
+				for(let producto of productos){
 
-		if (productoBuscado!=null){
-			res.render('./products/detalle',{producto: productoBuscado});
-		}
+					let objProducto = {
+						id: producto.id,
+						nombre: producto.nombre,
+						imagen:producto.imagen,
+						categoria: producto.categoria.nombre,
+						color: producto.color.nombre,
+						precio: producto.precio,
+						descuento:producto.descuento,
+						especificaciones:producto.especificaciones
+					}
 
-		res.send("Producto no encontrado");
+					listaProductos.push(objProducto);
+				}
+				console.log(listaProductos[0]);
+				
+				if (listaProductos.length>0){
+					//res.send("producto encontrado");
+					res.render("./products/detalle", {producto: listaProductos});
+					
+				}else{
+					res.send("Producto no encontrado, nada");
+				}
+
+				
+		
+				
+				
+			});
+
+		
+       
 	
 
 	},
@@ -150,7 +178,9 @@ const controladorProductos = {
 				for(let producto of productos){
 
 					let objProducto = {
+						id: producto.id,
 						nombre: producto.nombre,
+						imagen:producto.imagen,
 						categoria: producto.categoria.nombre,
 						color: producto.color.nombre,
 						precio: producto.precio

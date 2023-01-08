@@ -4,6 +4,7 @@
     height: 100%;
     padding-top: 40px;
     padding-bottom: 40px;  
+    
 }
 
 .sectionproducto{
@@ -12,12 +13,18 @@
 
 .containerimagen{
     text-align: center;
+    color: #91C612;
+    font-size:large
 }
 
 .imagenproducto{
+    font-family: Oxygen;
     width: 350px;
     height: 350px;
+   
+    
     margin-top: 20px;
+    
 }
 
 .containersubsection{
@@ -75,10 +82,11 @@
     background-color: #91C612;
     border-radius: 10px;
     color: black;
-    font-family: sans-serif;
-    font-weight: bold;
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: large;
     width: 70%;
-    height: 45px;
+   
     margin-top: 50px;
 }
 
@@ -129,7 +137,7 @@
 
 .tituloespecificaciones{
     text-align: center;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
 

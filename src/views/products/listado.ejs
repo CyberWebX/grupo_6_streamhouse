@@ -25,14 +25,14 @@
 
             <section id="sectionlistado">
 
-                <h3 class="titulolistado"> Productos destacados </h3>
+                <h3 class="titulolistado"> Todos los productos </h3>
                 
                 <div class="divorden">
                     <% for(let p of AllProductos) { %>
                         <a href="/products/<%= p.id %>">
                             <div class="divcontainerarticle">
                                 <article class="articlelistado">
-                                    <img class="imglistado"  src="./images/productos/<%= p.image %>" alt="<%= p.id %>">
+                                    <img class="imglistado"  src="../images/productos/<%= p.imagen %>" alt="<%= p.id %>">
                                     <h4 class="nombreproducto"> <%= p.nombre %> </h4>
                                     <div>
                                         <div class="containerdetalle">

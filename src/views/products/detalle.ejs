@@ -4,13 +4,13 @@
    <head>
     
         <%- include('../partials/head'); %>
-        <link rel="stylesheet" href="/css/products-detalle.css">
+       
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/footer.css">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-         
+        <link rel="stylesheet" href="/css/products-detalle.css">
     
    </head>
 
@@ -27,7 +27,12 @@
             <section class="sectionproducto">
 
                 <div class="containerimagen">
-                    <img class="imagenproducto" src="../images\productos\<%= producto.image %>" alt="">
+                    <img class="imagenproducto" src="../images\productos\<%= producto[0].imagen %>" alt="">
+                    <br>
+                    <div>
+                        <%= producto[0].nombre %>
+                    </div>
+                    
                 </div>
                 <div class="containersubsection">
                     <div class="containerdescripcion">
@@ -35,12 +40,12 @@
                     </div>
                     <div>
                         <article class="articlestreamhouse"> 
-                            <div class="precioespecial">PRECIO STREAMHOUSE: $<%= ( ( (100-producto.discount) * producto.price ) / 100  ) %></div>
-                            <div class="descuentoespecial">DESCUENTO <%= producto.discount %>% </div>
+                            <div class="precioespecial">PRECIO STREAMHOUSE: $<%= ( ( (100-producto[0].descuento) * producto[0].precio ) / 100  ) %></div>
+                            <div class="descuentoespecial">DESCUENTO <%= producto[0].descuento %>% </div>
                         </article>
                         <article class="articlempago"> PAGA CON MERCADO PAGO </article>
                         <article class="articlepreciolista"> 
-                            <div>PRECIO DE LISTA: $<%= producto.price %></div>
+                            <div>PRECIO DE LISTA: $<%= producto[0].precio %></div>
                             <div> PAGA EN HASTA 12 CUOTAS SIN INTERES</div>
                         </article>
                         <div class="containerbotoncomprar">
@@ -62,20 +67,11 @@
                 <div class="containerespecificaciones"> 
                     <h4 class="tituloespecificaciones"> ESPECIFICACIONES</h4>
                     <span class="especificaciones"> 
-                        MONITOR
-                        <br>
-                        <br>
-                        Tamaño de pantalla (clase): 49
-                        <br>
-                        Plano / Curvo: Curvo
-                        <br>
-                        Curvatura: 1000R
-                        <br>
-                        Relación de aspecto: 32:9
-                        <br>
-                        Brillo máximo (típico): 1000cd/m2 cd/㎡
-                        <br>
-                        Resolución: 5.120 x 1.440
+                       Categoria:<%= producto[0].categoria %>
+                       <br>
+                       Color: <%= producto[0].color %>
+                       <br>
+                       <%= producto[0].especificaciones %>
                     </span>
                 </div>
 
