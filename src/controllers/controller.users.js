@@ -55,7 +55,9 @@ const controladorUsuarios = {
                             if(isOkThePassword) {
                                 
                                 delete userToLogin.password;
+                                
                                 req.session.userLogged = userToLogin;
+                               
                                 //res.send('Ok Puedes ingresar')
                                 return res.redirect('./perfil');
                             }
@@ -90,7 +92,8 @@ const controladorUsuarios = {
     },
 
     perfil: function (req, res){
-       
+        console.log("Usuario es :");
+        console.log(req.session.userLogged);
         res.render("./users/perfil" ,{
             user: req.session.userLogged
         });

@@ -67,7 +67,9 @@ const controladorProductos = {
 				
 				if (listaProductos.length>0){
 					//res.send("producto encontrado");
-					res.render("./products/detalle", {producto: listaProductos});
+					console.log("Usuario es :");
+        		console.log(req.session.userLogged);
+					res.render("./products/detalle", {producto: listaProductos,user: req.session.userLogged});
 					
 				}else{
 					res.send("Producto no encontrado, nada");
@@ -99,7 +101,7 @@ const controladorProductos = {
         }
     
         if (productoBuscado!=null){
-            res.render('./products/editar',{producto: productoBuscado});
+            res.render('./products/editar',{producto: productoBuscado,user: req.session.userLogged});
         }
     
         res.send("Producto no encontrado");
@@ -188,7 +190,8 @@ const controladorProductos = {
 
 					listaProductos.push(objProducto);
 				}
-				res.render("./products/listado", {AllProductos: listaProductos});
+				
+				res.render("./products/listado", {AllProductos: listaProductos,user: req.session.userLogged});
 			});
 	}
 

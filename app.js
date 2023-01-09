@@ -3,7 +3,7 @@ const path = require ('path');
 const app = express();
 const session = require('express-session');
 const methodOverride = require('method-override');
-
+var user;
 
 const rutasMain             = require("./src/routes/routes.main.js")
 const rutasProducts         = require ("./src/routes/routes.products.js")
@@ -24,7 +24,7 @@ if (store("carritoCompra") ){
 app.use(session({
     secret: "Shh, Its a secret",
     resave:false,
-    saveUninitialized:false,
+    saveUninitialized:true,
 }));
 
 

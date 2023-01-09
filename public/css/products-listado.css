@@ -10,9 +10,10 @@
     background-color: #4a4f5f;
     width: 100vw;
     height: 7vh;
-    color: white;
+    color: greenyellow;
     justify-content: center;
     align-items: center;
+    font-size: x-large;
 }
 
 
