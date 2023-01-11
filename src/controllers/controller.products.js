@@ -10,7 +10,7 @@ const db = require('../database/models');
 const controladorProductos = {
 
     carrito: function (req, res){
-        res.render("./products/carrito");
+        res.render("./products/carrito",{user: req.session.userLogged});
     },
 
     crear: function (req, res){

@@ -5,6 +5,7 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 var user;
 
+
 const rutasMain             = require("./src/routes/routes.main.js")
 const rutasProducts         = require ("./src/routes/routes.products.js")
 const rutasUsers            = require ("./src/routes/routes.users.js")

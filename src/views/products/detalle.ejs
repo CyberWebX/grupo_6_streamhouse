@@ -12,15 +12,17 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="/css/products-detalle.css">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11">       </script>
+       
 
         
    </head>
 
    <body>
-    <script>
-        Swal.fire('Debe estar registrado para añadir productos asu carrito')
-    </script>
-    
+    <% if (!locals.user) {   %>
+            <script>
+                Swal.fire('Debe estar registrado para añadir productos asu carrito')
+            </script>
+    <%  }   %>
         <header >
 
             <%- include('../partials/header'); %>
@@ -56,8 +58,9 @@
                         <div class="containerbotoncomprar">
                             
 
-                            <% if (locals.user) {   %>
-                                <button type="submit" name="comprar" class="botoncomprar"> AÑADIR AL CARRITO </button>
+                            <% if (locals.user) {   %>   
+                                <button type="submit" name="comprar" class="botoncomprar" onclick="addProduct('<%= producto[0].id %>','<%= producto[0].nombre %>','<%= ( ( (100-producto[0].descuento) * producto[0].precio ) / 100  ) %>','../images/productos/<%= producto[0].imagen %>')"> AÑADIR AL CARRITO </button>
+                                 
                             <%  }   %>
                         </div>
                     <!-- 
@@ -94,7 +97,7 @@
             <%- include('../partials/footer'); %>
             
         </footer>
-
+        <script src="/js/addCar.js"></script>
     </body>
    
 <html>
