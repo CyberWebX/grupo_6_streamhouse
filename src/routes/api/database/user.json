@@ -1,0 +1,26 @@
+[
+ {
+  "id": 1,
+  "nombres": "mario ",
+  "apellidos": "Rovira",
+  "email": "xrovmario@yahoo.es",
+  "password": "$2a$10$x8IHR/5IugWsxHgr/La0sOyOZT5UW8T7KWxQ0r1YHwbbhc6RSz7B6",
+  "avatar": "profile-1667881893239.png"
+ },
+ {
+  "id": 2,
+  "nombres": "Kevin",
+  "apellidos": "Rovira",
+  "email": "kevin@gmail.com",
+  "password": "$2a$10$UaSEVikdcFqd1EtCvZmSSOHH.T7H2O5UlJCoACpMkUskna6RVn0oO",
+  "avatar": "profile-1667882364899.png"
+ },
+ {
+  "id": 3,
+  "nombres": "YINE",
+  "apellidos": "IGLESIAS",
+  "email": "yine@gmail.com",
+  "password": "$2a$10$kYpUey00V37qQqsqsp3icOPvQxUxSv7nogZX/0Rcs0saG/rM9R7gS",
+  "avatar": "profile-1669171925441.png"
+ }
+]

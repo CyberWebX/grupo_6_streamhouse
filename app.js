@@ -11,6 +11,9 @@ const rutasProducts         = require ("./src/routes/routes.products.js")
 const rutasUsers            = require ("./src/routes/routes.users.js")
 const rutasEnConstruccion   = require ("./src/routes/routes.enconstruccion.js")
 
+// ruatas dela api
+const rutasApi              = require("./src/routes/routes.Api.js")
+
 const {localStorage} = require("node-localstorage");
 const store = require("store2");
 
@@ -61,6 +64,10 @@ app.use("/products", rutasProducts)
 app.use("/users", rutasUsers)
 
 app.use("/enconstruccion", rutasEnConstruccion)
+
+app.use("/api",rutasApi )
+
+//app.use("/api",rutasApi)
 
 // puerto
 
