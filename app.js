@@ -71,6 +71,6 @@ app.use("/api",rutasApi )
 
 // puerto
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(process.env.PORT || 3001, function() {
     console.log("Servidor corriendo");
 })
