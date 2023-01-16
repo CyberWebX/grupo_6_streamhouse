@@ -1,7 +1,7 @@
 const { decodeBase64 } = require('bcryptjs');
 const fs = require('fs');
 const path = require('path');
-
+const { Op } = require("sequelize");
 //const productsFilePath = path.join(__dirname, '../data/products.json');
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -174,6 +174,35 @@ const controladorProductos = {
 			{association: 'categoria'},
 			{association: 'color'},			
 			]}).then((productos) => {
+				
+				let listaProductos = [];
+
+				for(let producto of productos){
+
+					let objProducto = {
+						id: producto.id,
+						nombre: producto.nombre,
+						imagen:producto.imagen,
+						categoria: producto.categoria.nombre,
+						color: producto.color.nombre,
+						precio: producto.precio
+					}
+
+					listaProductos.push(objProducto);
+				}
+				
+				res.render("./products/listado", {AllProductos: listaProductos,user: req.session.userLogged});
+			});
+	},
+
+	buscar: (req, res) => {
+
+		db.producto.findAll({include: [
+			{association: 'categoria'},
+			{association: 'color'},			
+			],where: {nombre: {
+				[Op.substring]: req.params.texto
+			  }}}).then((productos) => {
 				
 				let listaProductos = [];
 

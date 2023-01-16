@@ -48,7 +48,9 @@
 
 <div class="box1">
     <a href="/">   <img src = "../images/shlogo.jpg"  class="logo"> </img> </a>
-    <input type="text" class="buscador">
+      
+        <input type="text" class="buscador" value="" placeholder="Digite producto a Buscar....">
+    
     <% if (!locals.user) {   %>
         <a href="/users/login" class="box1-log" id="textoLoginInNav">   Login       </a>
     <%  }   %>

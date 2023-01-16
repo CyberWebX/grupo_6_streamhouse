@@ -34,7 +34,9 @@ router.put("/editar/:id", uploadFile.single('newimage'), controladorProductos.ed
 
 router.delete('/:id', controladorProductos.eliminar); 
 
-router.get("/", controladorProductos.listado)
+router.get("/", controladorProductos.listado);
+
+router.get("/buscar/:texto", controladorProductos.buscar)
 
 //Exportar
 
