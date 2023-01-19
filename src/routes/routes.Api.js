@@ -5,6 +5,7 @@ const { resourceLimits } = require('worker_threads');
 const router = express.Router();
 const controladorProductosApi = require('../controllers/controller.product.Api.js');
 const controladorUsuariosApi =  require('../controllers/controller.users.Api.js');
+const controladorCategoriasApi =  require('../controllers/controller.categorias.Api.js');
 
 // Rutas
     //Rutas Productos
@@ -17,6 +18,9 @@ const controladorUsuariosApi =  require('../controllers/controller.users.Api.js'
     //Rutas Usuarios
        router.get("/usuarios", controladorUsuariosApi.listadeUsuarios)
        router.get("/usuarios/:id", controladorUsuariosApi.listade1Usuario)
+    
+    //Rutas Categorias
+    router.get("/categorias", controladorCategoriasApi.listadeProductos)
 
 //Exportar
 
